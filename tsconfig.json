@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowImportingTsExtensions": true,
+    "noImplicitAny": false,
+
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "types": ["vitest/globals"],
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@shared/*": ["src/shared/*"],
+      "@timeline/*": ["src/features/timeline/*"],
+      "@media/*": ["src/features/media/*"],
+      "@sidebar/*": ["src/features/sidebar/*"]
+    }
+  },
+  "include": ["src", "vite.config.ts", "tailwind.config.ts"]
+}

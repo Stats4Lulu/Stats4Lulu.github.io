@@ -1,0 +1,65 @@
+@import 'tailwindcss';
+@config "../../tailwind.config.ts";
+
+.bg-background   { background-color: var(--background); }
+.bg-surface      { background-color: var(--surface); }
+.bg-accent       { background-color: var(--accent); }
+.bg-muted        { background-color: var(--muted);}
+.bg-rail         { background-color: var(--rail); }
+.text-text       { color: var(--text); }
+.dark .bg-background { background-color: var(--background-dark); }
+.dark .bg-surface    { background-color: var(--surface-dark); }
+.dark .bg-accent     { background-color: var(--accent-dark); }
+.dark .bg-rail       { background-color: var(--rail-dark); }
+.dark .text-text     { color: var(--text-dark); }
+
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.1);
+  }
+  30% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(1);
+  }
+}
+
+.animate-heartbeat {
+  animation: heartbeat 1.5s ease-in-out infinite;
+  display: inline-block;
+  transform-origin: center;
+}
+
+@keyframes pulse-ring {
+  0%,
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+
+.active-pulse::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  border: 2px solid theme('colors.ring-hover');
+  border-radius: 9999px;
+  transform: translate(-50%, -50%);
+  animation: pulse-ring 2s ease-in-out infinite;
+}
