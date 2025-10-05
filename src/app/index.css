@@ -7,9 +7,11 @@
 .bg-muted        { background-color: var(--muted);}
 .bg-rail         { background-color: var(--rail); }
 .text-text       { color: var(--text); }
+
 .dark .bg-background { background-color: var(--background-dark); }
 .dark .bg-surface    { background-color: var(--surface-dark); }
 .dark .bg-accent     { background-color: var(--accent-dark); }
+.dark .bg-muted      { background-color: var(--muted-dark);}
 .dark .bg-rail       { background-color: var(--rail-dark); }
 .dark .text-text     { color: var(--text-dark); }
 
