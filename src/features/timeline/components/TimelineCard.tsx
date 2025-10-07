@@ -31,7 +31,7 @@ export default function TimelineCard({
       className={`rounded-card shadow-surface cursor-pointer transition-all duration-200 ${s.panel} ${hoverHighlight ? 'hover:shadow-surfaceHover hover:-translate-y-0.5' : ''} ${active ? 'ring-accent dark:ring-accent-dark ring-2' : ''} bg-surface dark:bg-surface-dark text-text dark:text-text-dark`}
     >
       <div className="mb-2 flex items-start justify-between">
-        <p className={`text-accent dark:text-accent-dark ${s.date}`}>{date}</p>
+        <p className={`text-date dark:text-date-dark ${s.date}`}>{date}</p>
 
         <div className="ml-4 flex flex-wrap gap-1">
           {[item.category, item.jurisdiction]
@@ -47,7 +47,7 @@ export default function TimelineCard({
         </div>
       </div>
 
-      <h3 className={`text-accent dark:text-accent-dark ${s.title}`}>
+      <h3 className={`text-title dark:text-title-dark ${s.title}`}>
         {item.events.title}
       </h3>
 
@@ -60,7 +60,7 @@ export default function TimelineCard({
       )}
 
       {item.events.subtitle && (
-        <p className={`text-muted dark:text-muted-dark ${s.subtitle}`}>
+        <p className={`text-subtitle dark:text-subtitle-dark ${s.subtitle}`}>
           {item.events.subtitle}
         </p>
       )}
@@ -77,7 +77,7 @@ export default function TimelineCard({
               e.stopPropagation()
               onToggleExpand?.()
             }}
-            className={`mt-2 hover:underline ${s.sources} text-accent dark:text-accent-dark`}
+            className={`mt-2 hover:read ${s.sources} text-read dark:text-read-dark`}
           >
             {expanded ? 'Read less' : 'Read more'}
           </button>
@@ -87,7 +87,7 @@ export default function TimelineCard({
       {item.links?.length > 0 && (
         <div className="mt-3">
           <p
-            className={`text-muted dark:text-muted-dark mb-1 ${s.sourceLabel}`}
+            className={`text-underline dark:text-underline-dark mb-1 ${s.sourceLabel}`}
           >
             Sources:
           </p>
@@ -99,7 +99,7 @@ export default function TimelineCard({
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
-                className={`hover:underline ${s.sources} text-accent dark:text-accent-dark`}
+                className={`hover:links ${s.sources} text-links dark:text-links-dark`}
               >
                 {link.title}
               </a>

@@ -10,12 +10,14 @@ export function TimelineDot({
     <button
       onClick={onClick}
       aria-label={`Scroll to ${label}`}
-      className={`absolute top-1/2 left-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full transition-transform duration-300 hover:scale-110 ${isActive ? 'active-pulse' : ''} hover:ring-dot-ring bg-dot hover:ring-2 focus:ring-0 focus:outline-none`}
+      className={`absolute top-1/2 left-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full transition-transform duration-300 hover:scale-110 ${
+        isActive ? 'active-pulse' : ''
+      } bg-dot hover:ring-2 ring-hover focus:ring-0 focus:outline-none`}
       style={{ width: dotSize, height: dotSize }}
     >
       {isActive && (
         <div
-          className="bg-dot-inner rounded-full"
+          className="rounded-full bg-dotInner"
           style={{
             width: Math.max(5, dotSize * 0.7),
             height: Math.max(5, dotSize * 0.7),

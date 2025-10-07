@@ -7,7 +7,6 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // light theme
         background: '#E8F4F0',
         surface: '#B7D5C7',
         text: '#0F221B',
@@ -15,7 +14,13 @@ const config: Config = {
         accent: '#F46A1F',
         rail: '#F46A1F',
 
-        // dark theme
+        date: '#4B6E60',
+        title: '#F46A1F',
+        subtitle: '#35584D',
+        read: '#F46A1F',
+        links: '#4B6E60',
+        underline: '#F46A1F',
+
         'background-dark': '#0E1714',
         'surface-dark': '#1C2A26',
         'text-dark': '#E7F6F1',
@@ -23,13 +28,17 @@ const config: Config = {
         'accent-dark': '#FF8439',
         'rail-dark': '#FF8439',
 
-        // hover
-        'ring-hover': '#60A5FA',
+        'date-dark': '#7FA997',
+        'title-dark': '#FF8439',
+        'subtitle-dark': '#9CBFB2',
+        'read-dark': '#FF8439',
+        'links-dark': '#9CBFB2',
+        'underline-dark': '#FF8439',
 
-        // dot
+        ringHover: '#60A5FA',
         dot: '#BF5B45',
-        'dot-inner': '#E3C7B8', 
-        'dot-ring': '#BF5B454D',
+        dotInner: '#E3C7B8',
+        dotRing: '#BF5B454D',
       },
       borderRadius: {
         card: '12px',
@@ -40,7 +49,7 @@ const config: Config = {
         dot: '0 0 0 6px #BF5B4559',
       },
       dropShadow: {
-        glow: '0 0 8px #BF5B45', // reusable glowing text or icons
+        glow: '0 0 8px #BF5B45',
       },
     },
   },

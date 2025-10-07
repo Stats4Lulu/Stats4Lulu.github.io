@@ -1,40 +1,51 @@
 @import 'tailwindcss';
 @config "../../tailwind.config.ts";
 
+
 .bg-background   { background-color: var(--background); }
 .bg-surface      { background-color: var(--surface); }
 .bg-accent       { background-color: var(--accent); }
-.bg-muted        { background-color: var(--muted);}
+.bg-muted        { background-color: var(--muted); }
 .bg-rail         { background-color: var(--rail); }
+
 .text-text       { color: var(--text); }
+.text-date       { color: var(--date); }
+.text-title      { color: var(--title); }
+.text-subtitle   { color: var(--subtitle); }
+.text-read       { color: var(--read); }
+.text-links      { color: var(--links); }
+.text-underline  { color: var(--underline); }
 
 .dark .bg-background { background-color: var(--background-dark); }
 .dark .bg-surface    { background-color: var(--surface-dark); }
 .dark .bg-accent     { background-color: var(--accent-dark); }
-.dark .bg-muted      { background-color: var(--muted-dark);}
+.dark .bg-muted      { background-color: var(--muted-dark); }
 .dark .bg-rail       { background-color: var(--rail-dark); }
-.dark .text-text     { color: var(--text-dark); }
+
+.dark .text-text       { color: var(--text-dark); }
+.dark .text-date       { color: var(--date-dark); }
+.dark .text-title      { color: var(--title-dark); }
+.dark .text-subtitle   { color: var(--subtitle-dark); }
+.dark .text-read       { color: var(--read-dark); }
+.dark .text-links      { color: var(--links-dark); }
+.dark .text-underline  { color: var(--underline-dark); }
+
+.bg-dot       { background-color: var(--dot) }
+.bg-dotInner  { background-color: var(--dotInner) }
+
+.border-dotRing { border-color: var(--dotRing) }
+.ring-dotRing   { --tw-ring-color: var(--dotRing); }
+
+.ring-hover { --tw-ring-color: var(--ringHover); }
 
 
 @keyframes heartbeat {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  15% {
-    transform: scale(1.1);
-  }
-  30% {
-    transform: scale(1);
-  }
-  45% {
-    transform: scale(1.1);
-  }
-  60% {
-    transform: scale(1);
-  }
+  0%,100% { transform: scale(1); }
+  15%     { transform: scale(1.1); }
+  30%     { transform: scale(1); }
+  45%     { transform: scale(1.1); }
+  60%     { transform: scale(1); }
 }
-
 .animate-heartbeat {
   animation: heartbeat 1.5s ease-in-out infinite;
   display: inline-block;
@@ -42,8 +53,7 @@
 }
 
 @keyframes pulse-ring {
-  0%,
-  100% {
+  0%,100% {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
   }
@@ -52,7 +62,6 @@
     transform: translate(-50%, -50%) scale(1.05);
   }
 }
-
 .active-pulse::before {
   content: '';
   position: absolute;
@@ -60,7 +69,7 @@
   left: 50%;
   width: calc(100% + 8px);
   height: calc(100% + 8px);
-  border: 2px solid theme('colors.ring-hover');
+  border: 2px solid var(--ringHover);
   border-radius: 9999px;
   transform: translate(-50%, -50%);
   animation: pulse-ring 2s ease-in-out infinite;
