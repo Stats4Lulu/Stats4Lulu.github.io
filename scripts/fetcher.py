@@ -20,7 +20,7 @@ def parse_arguments():
     return parser.parse_args()
 
 
-def save_csv(worksheet, outputfile):
+def save_csv(worksheet, outputfile) -> None:
     rows = worksheet.get_all_records()
 
     if not rows: return None
