@@ -12,6 +12,7 @@
 .text-date       { color: var(--date); }
 .text-title      { color: var(--title); }
 .text-subtitle   { color: var(--subtitle); }
+.text-accent      {color: var(--accent);}
 .text-read       { color: var(--read); }
 .text-links      { color: var(--links); }
 .text-underline  { color: var(--underline); }

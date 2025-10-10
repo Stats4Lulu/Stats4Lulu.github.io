@@ -50,7 +50,7 @@ export default function App() {
 
       <main className="mx-auto max-w-3xl p-6">
         <Credits />
-        <h1 className="text-accent mb-6 text-2xl font-bold">
+        <h1 className="text-accent dark:text-accent-dark mb-6 text-2xl font-bold">
           Luigi Mangione Event Timeline
         </h1>
 
