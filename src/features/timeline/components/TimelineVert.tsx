@@ -29,7 +29,7 @@ export function TimelineVert({
           bottom: '-60px',
         }}
       >
-        <div className="bg-rail dark:bg-accent-dark h-full w-full" />
+        <div className="bg-rail dark:bg-rail-dark h-full w-full" />
       </div>
 
       <div className={spacing}>

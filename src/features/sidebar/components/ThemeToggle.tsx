@@ -24,7 +24,7 @@ export default function ThemeToggle({
   return (
     <motion.button
       onClick={toggleTheme}
-      className="bg-surface text-text hover:bg-background dark:bg-surface-dark dark:text-text-dark dark:hover:bg-background-dark flex w-full items-center gap-3 rounded-lg p-4 transition-colors duration-200"
+      className="bg-sbSection text-sbText hover:bg-sbBackground dark:bg-sbSection-dark dark:text-sbText-dark dark:hover:bg-sbBackground-dark flex w-full items-center gap-3 rounded-lg p-4 transition-colors duration-200"
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
     >
@@ -43,7 +43,7 @@ export default function ThemeToggle({
         <div className="text-sm font-semibold">
           {isDark ? 'Light mode' : 'Dark mode'}
         </div>
-        <div className="text-muted dark:text-muted-dark text-xs opacity-75">
+        <div className="text-sbText dark:text-sbText-dark text-xs opacity-75">
           {isDark ? 'Click to switch to light' : 'Click to switch to dark'}
         </div>
       </div>

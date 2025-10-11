@@ -57,7 +57,7 @@ export default function PhotoCarousel({
 
   return (
     <div
-      className={`group bg-surface dark:bg-surface-dark shadow-surface relative my-3 overflow-hidden rounded-md ${className}`}
+      className={`group bg-photoBackground dark:bg-photoBackground-dark shadow-surface relative my-3 overflow-hidden rounded-md ${className}`}
     >
       <MediaItemRenderer
         item={currentItem}

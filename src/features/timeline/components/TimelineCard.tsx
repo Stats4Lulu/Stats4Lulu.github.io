@@ -28,7 +28,7 @@ export default function TimelineCard({
     <div
       id={`timeline-card-${item.id}`}
       onClick={onSelect}
-      className={`rounded-card shadow-surface cursor-pointer transition-all duration-200 ${s.panel} ${hoverHighlight ? 'hover:shadow-surfaceHover hover:-translate-y-0.5' : ''} ${active ? 'ring-accent dark:ring-accent-dark ring-2' : ''} bg-surface dark:bg-surface-dark text-text dark:text-text-dark`}
+      className={`rounded-card shadow-surface cursor-pointer transition-all duration-200 ${s.panel} ${hoverHighlight ? 'hover:shadow-surfaceHover hover:-translate-y-0.5' : ''} ${active ? 'ring-active dark:ring-active-dark ring-2' : ''} bg-background dark:bg-background-dark text-context dark:text-context-dark`}
     >
       <div className="mb-2 flex items-start justify-between">
         <p className={`text-date dark:text-date-dark ${s.date}`}>{date}</p>
@@ -39,7 +39,7 @@ export default function TimelineCard({
             .map((label, idx) => (
               <span
                 key={idx}
-                className={`bg-accent dark:bg-accent-dark text-text-dark dark:text-text rounded font-medium ${s.badge}`}
+                className={`bg-category dark:bg-category-dark text-juris dark:text-juris-dark rounded font-medium ${s.badge}`}
               >
                 {label}
               </span>
@@ -87,7 +87,7 @@ export default function TimelineCard({
       {item.links?.length > 0 && (
         <div className="mt-3">
           <p
-            className={`text-underline dark:text-underline-dark mb-1 ${s.sourceLabel}`}
+            className={`text-source dark:text-source-dark mb-1 ${s.sourceLabel}`}
           >
             Sources:
           </p>

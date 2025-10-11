@@ -15,7 +15,7 @@ export default function SidebarWrapper({
       <button
         onClick={() => setIsOpen(true)}
         aria-label="Open sidebar"
-        className="bg-background text-text border-surface hover:bg-surface dark:bg-background-dark dark:text-text-dark dark:border-surface-dark dark:hover:bg-surface-dark fixed top-6 left-6 z-50 rounded-full border p-3 shadow-lg transition-colors duration-200 hover:scale-105 active:scale-95"
+        className="bg-sbBackground text-sbText border-sbSection hover:bg-sbSection dark:bg-sbBackground-dark dark:text-sbText-dark dark:border-sbSection-dark dark:hover:bg-sbSection-dark fixed top-6 left-6 z-50 rounded-full border p-3 shadow-lg transition-colors duration-200 hover:scale-105 active:scale-95"
       >
         <Menu size={20} />
       </button>
@@ -39,7 +39,7 @@ export default function SidebarWrapper({
             {isOpen && (
               <DialogPanel
                 key="panel"
-                className="bg-background border-surface dark:bg-background-dark dark:border-surface-dark h-full w-96 overflow-y-auto border-r shadow-xl"
+                className="bg-sbBackground border-sbSection dark:bg-sbBackground-dark dark:border-sbSection-dark h-full w-96 overflow-y-auto border-r shadow-xl"
               >
                 <motion.div
                   initial={{ x: '-100%' }}
@@ -49,18 +49,18 @@ export default function SidebarWrapper({
                     type: 'spring',
                     stiffness: 280,
                     damping: 26,
-                    mass: 0.9,
+                    mass: 1,
                   }}
                   className="flex h-full flex-col"
                 >
-                  <div className="border-surface dark:border-surface-dark flex items-center justify-between border-b p-6">
-                    <DialogTitle className="text-text dark:text-text-dark text-lg font-semibold">
+                  <div className="border-bgSection dark:border-sbSection-dark flex items-center justify-between border-b p-6">
+                    <DialogTitle className="text-sbtitle dark:text-sbTitle-dark text-lg font-semibold">
                       Timeline controls
                     </DialogTitle>
                     <button
                       onClick={() => setIsOpen(false)}
                       aria-label="Close sidebar"
-                      className="text-muted hover:text-text hover:bg-surface dark:text-muted-dark dark:hover:text-text-dark dark:hover:bg-surface-dark rounded-lg p-2 transition-colors duration-150"
+                      className="text-sbText hover:text-sbText hover:bg-sbSection dark:text-sbText-dark dark:hover:text-sbText-dark dark:hover:bg-sbSection-dark rounded-lg p-2 transition-colors duration-150"
                     >
                       <X size={20} />
                     </button>

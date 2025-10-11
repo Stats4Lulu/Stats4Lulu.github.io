@@ -7,38 +7,110 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: '#E8F4F0',
-        surface: '#B7D5C7',
-        text: '#0F221B',
-        muted: '#4B6E60',
-        accent: '#F46A1F',
-        rail: '#F46A1F',
+        mainBackground: '#F8FAFC',
+        mainTitle: '#0F172A',
+        mainLinks: '#CBD5E1',
+        mainText: '#1E293B',
+        mainScroll: '#64748B',
+        mainHeart: '#E11D48',
 
-        date: '#4B6E60',
-        title: '#F46A1F',
-        subtitle: '#35584D',
-        read: '#F46A1F',
-        links: '#4B6E60',
-        underline: '#F46A1F',
+        'mainBackground-dark': '#0F172A',
+        'mainTitle-dark': '#F1F5F9',
+        'mainLinks-dark': '#334155',
+        'mainText-dark': '#E2E8F0',
+        'mainScroll-dark': '#94A3B8',
+        'mainHeart-dark': '#FB7185',
 
-        'background-dark': '#0E1714',
-        'surface-dark': '#1C2A26',
-        'text-dark': '#E7F6F1',
-        'muted-dark': '#7FA997',
-        'accent-dark': '#FF8439',
-        'rail-dark': '#FF8439',
+        photoZoom: '#22c55e',
+        photoCamera: '#f97316',
+        photoArrow: '#9d71fbff',
+        photoIndexTop: '#0f172a',
+        photoBackground: '#f8fafc',
+        photoIndexBottomActive: '#9d71fbff',
+        photoIndexBottomNonActive: '#cbd5e1',
+        photoText: '#1e293b',
 
-        'date-dark': '#7FA997',
-        'title-dark': '#FF8439',
-        'subtitle-dark': '#9CBFB2',
-        'read-dark': '#FF8439',
-        'links-dark': '#9CBFB2',
-        'underline-dark': '#FF8439',
+        'photoZoom-dark': '#4ade80',
+        'photoCamera-dark': '#fb923c',
+        'photoArrow-dark': '#c4a2ff',
+        'photoIndexTop-dark': '#e2e8f0',
+        'photoBackground-dark': '#0f172a',
+        'photoIndexBottomActive-dark': '#c4a2ff',
+        'photoIndexBottomNonActive-dark': '#475569',
+        'photoText-dark': '#f1f5f9',
+
+        active: '#F97316',       // bright orange
+        date: '#0EA5E9',         // sky blue
+        title: '#1E293B',        // slate gray
+        background: '#F8FAFC',   // off white
+        read: '#16A34A',         // green
+        source: '#9333EA',       // purple
+        links: '#2563EB',        // deep blue
+        subtitle: '#64748B',     // muted slate
+        rail: '#BF5B45',         // your given brick red
+        context: '#D97706',      // amber
+        juris: '#DC2626',        // red
+        category: '#0891B2',     // cyan
 
         ringHover: '#60A5FA',
         dot: '#BF5B45',
         dotInner: '#E3C7B8',
         dotRing: '#BF5B454D',
+
+        'active-dark': '#FB923C',       // softer orange
+        'date-dark': '#38BDF8',         // bright sky
+        'title-dark': '#F1F5F9',        // near white
+        'background-dark': '#0F172A',   // deep navy
+        'read-dark': '#22C55E',         // green
+        'source-dark': '#A855F7',       // purple
+        'links-dark': '#3B82F6',        // blue
+        'subtitle-dark': '#94A3B8',     // lighter slate
+        'rail-dark': '#BF5B45',
+        'context-dark': '#F59E0B',      // amber
+        'juris-dark': '#EF4444',        // brighter red
+        'category-dark': '#06B6D4',     // cyan
+
+        'ringHover-dark': '#60A5FA',
+        'dot-dark': '#BF5B45',
+        'dotInner-dark': '#E3C7B8',
+        'dotRing-dark': '#BF5B454D',
+
+        sbBackground: '#F8FAFC',
+        sbIcon: '#475569',
+        sbText: '#334155',
+        sbTitle: '#0F172A',
+        sbSection: '#E2E8F0',
+        sbHover: '#F97316',
+        sbSelectButton: '#CBD5E1',
+        sbClearButton: '#E11D48',
+        sbSelectText: '#0F766E',
+        sbClearText: '#FFFFFF',
+        sbCheckboxMark: '#CA8A04',
+        sbCheckboxOutline: '#F59E0B',
+        sbCheckboxFiller: '#F1F5F9',
+        sbActive: '#2563EB',
+        sbPassive: '#A1A1AA',
+        sbActiveText: '#FFFFFF',
+        sbPassiveText: '#475569',
+
+        'sbBackground-dark': '#0F172A',
+        'sbIcon-dark': '#94A3B8',
+        'sbText-dark': '#E2E8F0',
+        'sbTitle-dark': '#F8FAFC',
+        'sbSection-dark': '#1E293B',
+        'sbHover-dark': '#FB923C',
+        'sbSelectButton-dark': '#334155',
+        'sbClearButton-dark': '#BE123C',
+        'sbSelectText-dark': '#2DD4BF',
+        'sbClearText-dark': '#F8FAFC',
+        'sbCheckboxMark-dark': '#EAB308',
+        'sbCheckboxOutline-dark': '#FACC15',
+        'sbCheckboxFiller-dark': '#1E293B',
+        'sbActive-dark': '#3B82F6',
+        'sbPassive-dark': '#64748B',
+        'sbActiveText-dark': '#0F172A',
+        'sbPassiveText-dark': '#CBD5E1',
+
       },
       borderRadius: {
         card: '12px',

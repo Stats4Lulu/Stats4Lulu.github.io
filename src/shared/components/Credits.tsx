@@ -2,12 +2,12 @@ import { Heart } from 'lucide-react'
 
 export default function TimelineCredits() {
   return (
-    <div className="border-muted/20 dark:border-muted-dark/20 text-muted dark:text-muted-dark mb-6 border-b py-2 text-center text-xs transition-colors">
+    <div className="border-mainText/20 dark:border-mainText-dark/20 text-mainText dark:text-mainText-dark mb-6 border-b py-2 text-center text-xs transition-colors">
       <p className="flex items-center justify-center gap-1">
         <span>Timeline created with</span>
         <Heart
           size={14}
-          className="text-accent animate-heartbeat drop-shadow-sm"
+          className="text-mainHeart animate-heartbeat drop-shadow-sm"
           fill="currentColor"
           stroke="none"
           aria-hidden="true"
@@ -17,7 +17,7 @@ export default function TimelineCredits() {
           href="https://tinyurl.com/stats4lulu"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-accent hover:text-accent/80 hover:underline"
+          className="text-mainLinks hover:text-mainLinks/80 hover:underline"
         >
           Stats4Lulu
         </a>
@@ -26,7 +26,7 @@ export default function TimelineCredits() {
           href="https://luigistics.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-accent hover:text-accent/80 hover:underline"
+          className="text-mainLinks hover:text-mainLinks/80 hover:underline"
         >
           JAE
         </a>
@@ -37,7 +37,7 @@ export default function TimelineCredits() {
           href="https://discord.gg/m8g6Ryv5PH"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-accent hover:text-accent/80 hover:underline"
+          className="text-mainLinks hover:text-mainLinks/80 hover:underline"
         >
           Join our Discord
         </a>
@@ -46,7 +46,7 @@ export default function TimelineCredits() {
           href="https://docs.google.com/forms/d/e/1FAIpQLSeLFppQsFajVnM_QrxfphwQ-1EKnUKWgMMfBfga9yX3JkZ_9Q/viewform"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-accent hover:text-accent/80 hover:underline"
+          className="text-mainLinks hover:text-mainLinks/80 hover:underline"
         >
           Bug reports & suggestions
         </a>

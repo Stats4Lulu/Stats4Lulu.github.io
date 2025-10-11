@@ -40,7 +40,7 @@ export default function Timeline({
   if (!items.length) {
     return (
       <div className="py-8 text-center">
-        <p className="text-muted dark:text-muted-dark text-lg">
+        <p className="text-subtitle dark:text-subtitle-dark text-lg">
           {searchQuery
             ? `No results found for "${searchQuery}"`
             : 'No timeline items available'}

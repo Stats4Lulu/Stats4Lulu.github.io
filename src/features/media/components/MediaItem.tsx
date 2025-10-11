@@ -21,7 +21,7 @@ const getYouTubeID = (url: string) => {
 
 const YOUTUBE_OPTS = { playerVars: { modestbranding: 1, rel: 0 } }
 
-const BORDER = 'border border-muted/20 dark:border-muted-dark/20'
+const BORDER = 'border border-muted/20'
 
 export default function MediaItemRenderer({
   item,
@@ -39,7 +39,7 @@ export default function MediaItemRenderer({
           onClick={onClickImage}
         />
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 transition-opacity group-hover:opacity-100">
-          <ZoomIn className="bg-accent dark:bg-accent-dark h-10 w-10 rounded-full p-2 text-white shadow-lg" />
+          <ZoomIn className="bg-photoZoom dark:bg-photoZoom-dark h-10 w-10 rounded-full p-2 text-white shadow-lg" />
         </div>
       </div>
     )

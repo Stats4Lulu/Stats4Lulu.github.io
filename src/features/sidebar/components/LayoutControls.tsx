@@ -31,8 +31,8 @@ export default function LayoutControls({
 
   const variant = (active: boolean) =>
     active
-      ? 'bg-accent text-white'
-      : 'bg-surface text-text hover:bg-surface/80 dark:bg-surface-dark dark:text-text-dark dark:hover:bg-surface-dark/80'
+      ? 'bg-sbActive dark:bg-sbActive-dark text-sbActiveText dark:text-sbActiveText-dark'
+      : 'bg-sbPassive text-sbPassiveText hover:bg-bg-sbPassive/80 dark:bg-sbPassive-dark dark:text-sbPassiveText-dark dark:hover:bg-sbPassive-dark/80'
 
   return (
     <CollapsibleSection
@@ -42,7 +42,7 @@ export default function LayoutControls({
     >
       <div className="space-y-4">
         <div>
-          <label className="text-text/70 dark:text-text-dark/70 mb-2 block text-xs font-medium">
+          <label className="text-sbText dark:text-sbText-dark mb-2 block text-xs font-medium">
             Timeline layout
           </label>
           <div className="grid gap-2">
@@ -67,7 +67,7 @@ export default function LayoutControls({
         </div>
 
         <div>
-          <label className="text-text/70 dark:text-text-dark/70 mb-2 block text-xs font-medium">
+          <label className="text-sbText dark:text-sbText-dark mb-2 block text-xs font-medium">
             Card size
           </label>
           <div

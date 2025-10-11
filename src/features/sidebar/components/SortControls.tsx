@@ -15,8 +15,8 @@ export default function SortControls({ order, onChange }: Props) {
           onClick={() => onChange('ASC')}
           className={`flex items-center gap-2 rounded-lg p-3 transition-colors ${
             order === 'ASC'
-              ? 'bg-accent text-white'
-              : 'bg-surface text-text hover:bg-surface/80 dark:bg-surface-dark dark:text-text-dark dark:hover:bg-surface-dark/80'
+              ? 'bg-sbActive dark:bg-sbActive text-sbActiveText dark:text-sbActiveText-dark'
+              : 'bg-sbPassive text-sbPassiveText hover:bg-sbPassive/80 dark:bg-sbPassive-dark dark:text-sbPassiveText-dark dark:hover:bg-sbPassive-dark/80'
           }`}
         >
           <ArrowDownAZ size={16} />
@@ -26,8 +26,8 @@ export default function SortControls({ order, onChange }: Props) {
           onClick={() => onChange('DESC')}
           className={`flex items-center gap-2 rounded-lg p-3 transition-colors ${
             order === 'DESC'
-              ? 'bg-accent text-white'
-              : 'bg-surface text-text hover:bg-surface/80 dark:bg-surface-dark dark:text-text-dark dark:hover:bg-surface-dark/80'
+              ? 'bg-sbActive dark:bg-sbActive text-sbActiveText dark:text-sbActiveText-dark'
+              : 'bg-sbPassive text-sbPassiveText hover:bg-sbPassive/80 dark:bg-sbPassive-dark dark:text-sbPassiveText-dark dark:hover:bg-sbPassive-dark/80'
           }`}
         >
           <ArrowUpAZ size={16} />

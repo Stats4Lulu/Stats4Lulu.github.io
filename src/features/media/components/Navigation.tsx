@@ -2,7 +2,7 @@ import { ChevronLeft, ChevronRight, Camera, Play } from 'lucide-react'
 import type { NavProps } from '@media/types'
 
 const NAV_BUTTON =
-  'absolute top-1/2 -translate-y-1/2 bg-accent dark:bg-accent-dark text-white p-3 rounded-full ' +
+  'absolute top-1/2 -translate-y-1/2 bg-photoArrow dark:bg-photoArrow-dark text-white p-3 rounded-full ' +
   'opacity-0 group-hover:opacity-100 transition hover:scale-110'
 
 export default function Navigation({
@@ -48,20 +48,20 @@ export default function Navigation({
               aria-label={`Go to ${isVideo ? 'video' : 'image'} ${i + 1}`}
               className={`h-2 w-2 rounded-full transition ${
                 i === currentIndex
-                  ? 'bg-accent dark:bg-accent-dark scale-125'
-                  : 'bg-white/50 hover:bg-white/75'
+                  ? 'bg-photoIndexBottomActive dark:bg-photoIndexBottomActive-dark scale-125'
+                  : 'bg-photoIndexBottomNonActive/50 hover:bg-photoIndexBottomNonActive/75'
               } ${isVideo ? 'rounded-sm' : ''}`}
             />
           )
         })}
       </div>
 
-      <div className="bg-surface/90 dark:bg-surface-dark/90 absolute top-3 right-3 flex items-center gap-2 rounded-full px-3 py-2 text-xs opacity-0 transition group-hover:opacity-100">
-        <Icon className="text-accent dark:text-accent-dark h-4 w-4" />
-        <span>
+      <div className="bg-photoIndexTop/90 dark:bg-photoIndexTop-dark/90 absolute top-3 right-3 flex items-center gap-2 rounded-full px-3 py-2 text-xs opacity-0 transition group-hover:opacity-100">
+        <Icon className="text-photoCamera dark:text-photoCamera-dark h-4 w-4" />
+        <span className="text-photoText">
           {currentIndex + 1} / {total}
         </span>
-      </div>
+      </div>  
     </>
   )
 }

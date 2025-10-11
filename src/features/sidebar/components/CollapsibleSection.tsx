@@ -23,16 +23,16 @@ export default function CollapsibleSection({
         onClick={() => setIsOpen((prev) => !prev)}
         aria-expanded={isOpen}
         aria-controls={`section-${title}`}
-        className="bg-surface text-text hover:bg-surface/80 dark:bg-surface-dark dark:text-text-dark dark:hover:bg-surface-dark/80 flex w-full items-center justify-between rounded-lg p-3 transition-colors duration-200"
+        className="bg-sbSection text-sbText hover:bg-sbSection/80 dark:bg-sbSection-dark dark:text-sbText-dark dark:hover:bg-sbSection-dark/80 flex w-full items-center justify-between rounded-lg p-3 transition-colors duration-200"
       >
         <div className="flex items-center gap-3">
-          <div className="text-accent">{icon}</div>
+          <div className="text-sbActive">{icon}</div>
           <span className="text-sm font-semibold">{title}</span>
         </div>
 
         <div className="flex items-center gap-2">
           {badge && (
-            <span className="bg-muted/20 text-text dark:bg-muted-dark/40 dark:text-text-dark rounded-full px-2 py-0.5 text-xs font-medium">
+            <span className="bg-sbIcon/20 text-sbText dark:bg-sbDark-dark/40 dark:text-sbText-dark rounded-full px-2 py-0.5 text-xs font-medium">
               {badge}
             </span>
           )}

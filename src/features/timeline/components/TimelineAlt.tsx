@@ -16,8 +16,8 @@ function DateLabel({
     <div
       className={`absolute top-1/2 -translate-y-1/2 ${side === 'left' ? 'left-full ml-12' : 'right-full mr-12'} z-20 transition-all duration-300 ${
         active
-          ? 'text-accent dark:text-accent-dark drop-shadow-date font-bold'
-          : 'text-accent dark:text-accent-dark'
+          ? 'text-date dark:text-date-dark drop-shadow-date font-bold'
+          : 'text-date dark:text-date-dark'
       }`}
     >
       <span className="block text-center font-semibold whitespace-nowrap">
@@ -49,7 +49,7 @@ export function TimelineAlt({
         className="pointer-events-none absolute left-1/2 -translate-x-1/2"
         style={{ width: `${lineWidth}px`, top: '-60px', bottom: '-60px' }}
       >
-        <div className="bg-rail dark:bg-accent-dark h-full w-full" />
+        <div className="bg-rail dark:bg-rail-dark h-full w-full" />
       </div>
       <div
         className={`grid ${gapY}`}

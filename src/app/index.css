@@ -1,43 +1,239 @@
 @import 'tailwindcss';
 @config "../../tailwind.config.ts";
 
+.bg-mainBackground   { background-color: var(--mainBackground); }
+.bg-mainTitle      { background-color: var(--mainTitle); }
+.bg-mainLinks       { background-color: var(--mainLinks); }
+.bg-mainScroll        { background-color: var(--mainScroll); }
+.bg-mainText  { background-color: var(--mainText); }
+.bg-mainHeart  { background-color: var(--mainHeart); }
 
-.bg-background   { background-color: var(--background); }
-.bg-surface      { background-color: var(--surface); }
-.bg-accent       { background-color: var(--accent); }
-.bg-muted        { background-color: var(--muted); }
-.bg-rail         { background-color: var(--rail); }
+.text-mainBackground   { color: var(--mainBackground); }
+.text-mainTitle      { color: var(--mainTitle); }
+.text-mainLinks       { color: var(--mainLinks); }
+.text-mainScroll        { color: var(--mainScroll); }
+.text-mainText  { color: var(--mainText); }
+.text-mainHeart  { color: var(--mainHeart); }
 
-.text-text       { color: var(--text); }
-.text-date       { color: var(--date); }
-.text-title      { color: var(--title); }
-.text-subtitle   { color: var(--subtitle); }
-.text-accent      {color: var(--accent);}
-.text-read       { color: var(--read); }
-.text-links      { color: var(--links); }
-.text-underline  { color: var(--underline); }
+.dark .bg-mainBackground   { background-color: var(--mainBackground-dark); }
+.dark .bg-mainTitle      { background-color: var(--mainTitle-dark); }
+.dark .bg-mainLinks       { background-color: var(--mainLinks-dark); }
+.dark .bg-mainScroll        { background-color: var(--mainScroll-dark); }
+.dark .bg-mainText  { background-color: var(--mainText-dark); }
+.dark .bg-mainHeart  { background-color: var(--mainHeart-dark); }
 
+.dark .text-mainBackground   { color: var(--mainBackground-dark); }
+.dark .text-mainTitle      { color: var(--mainTitle-dark); }
+.dark .text-mainLinks       { color: var(--mainLinks-dark); }
+.dark .text-mainScroll        { color: var(--mainScroll-dark); }
+.dark .text-mainText  { color: var(--mainText-dark); }
+.dark .text-mainHeart  { color: var(--mainHeart-dark); }
+
+.bg-photoText { background-color: var(--photoText); }
+.bg-photoBackground { background-color: var(--photoBackground); }
+.bg-photoArrow { background-color: var(--photoArrow); }
+.bg-photoIndexTop { background-color: var(--photoIndexTop); }
+.bg-photoIndexBottomActive { background-color: var(--photoIndexBottomActive); }
+.bg-photoIndexBottomNonActive { background-color: var(--photoIndexBottomNonActive); }
+.bg-photoZoom { background-color: var(--photoZoom); }
+.bg-photoCamera { background-color: var(--photoCamera); }
+
+.dark .bg-photoText { background-color: var(--photoText-dark); }
+.dark .bg-photoBackground { background-color: var(--photoBackground-dark); }
+.dark .bg-photoArrow { background-color: var(--photoArrow-dark); }
+.dark .bg-photoIndexTop { background-color: var(--photoIndexTop-dark); }
+.dark .bg-photoIndexBottomActive { background-color: var(--photoIndexBottomActive-dark); }
+.dark .bg-photoIndexBottomNonActive { background-color: var(--photoIndexBottomNonActive-dark); }
+.dark .bg-photoZoom { background-color: var(--photoZoom-dark); }
+.dark .bg-photoCamera { background-color: var(--photoCamera-dark); }
+
+.text-photoText { color: var(--photoText); }
+.text-photoBackground { color: var(--photoBackground); }
+.text-photoArrow { color: var(--photoArrow); }
+.text-photoIndexTop { color: var(--photoIndexTop); }
+.text-photoIndexBottomActive { color: var(--photoIndexBottomActive); }
+.text-photoIndexBottomNonActive { color: var(--photoIndexBottomNonActive); }
+.text-photoZoom { color: var(--photoZoom); }
+.text-photoCamera { color: var(--photoCamera); }
+
+.dark .text-photoText { color: var(--photoText-dark); }
+.dark .text-photoBackground { color: var(--photoBackground-dark); }
+.dark .text-photoArrow { color: var(--photoArrow-dark); }
+.dark .text-photoIndexTop { color: var(--photoIndexTop-dark); }
+.dark .text-photoIndexBottomActive { color: var(--photoIndexBottomActive-dark); }
+.dark .text-photoIndexBottomNonActive { color: var(--photoIndexBottomNonActive-dark); }
+.dark .text-photoZoom { color: var(--photoZoom-dark); }
+.dark .text-photoCamera { color: var(--photoCamera-dark); }
+
+.bg-active { background-color: var(--active); }
+.bg-date { background-color: var(--date); }
+.bg-title { background-color: var(--title); }
+.bg-background { background-color: var(--background); }
+.bg-read { background-color: var(--read); }
+.bg-source { background-color: var(--source); }
+.bg-links { background-color: var(--links); }
+.bg-rail { background-color: var(--rail); }
+.bg-context { background-color: var(--context); }
+.bg-juris { background-color: var(--juris); }
+.bg-category { background-color: var(--category); }
+.bg-subtitle { background-color: var(--subtitle); }
+.bg-glow { background-color: var(--glow); }
+
+.text-active { color: var(--active); }
+.text-date { color: var(--date); }
+.text-title { color: var(--title); }
+.text-background { color: var(--background); }
+.text-read { color: var(--read); }
+.text-source { color: var(--source); }
+.text-links { color: var(--links); }
+.text-rail { color: var(--rail); }
+.text-context { color: var(--context); }
+.text-juris { color: var(--juris); }
+.text-category { color: var(--category); }
+.text-subtitle { color: var(--subtitle); }
+.text-glow { color: var(--glow); }
+
+.dark .bg-active { background-color: var(--active-dark); }
+.dark .bg-date { background-color: var(--date-dark); }
+.dark .bg-title { background-color: var(--title-dark); }
 .dark .bg-background { background-color: var(--background-dark); }
-.dark .bg-surface    { background-color: var(--surface-dark); }
-.dark .bg-accent     { background-color: var(--accent-dark); }
-.dark .bg-muted      { background-color: var(--muted-dark); }
-.dark .bg-rail       { background-color: var(--rail-dark); }
+.dark .bg-read { background-color: var(--read-dark); }
+.dark .bg-source { background-color: var(--source-dark); }
+.dark .bg-links { background-color: var(--links-dark); }
+.dark .bg-subtitle { background-color: var(--subtitle-dark); }
+.dark .bg-rail { background-color: var(--rail-dark); }
+.dark .bg-context { background-color: var(--context-dark); }
+.dark .bg-juris { background-color: var(--juris-dark); }
+.dark .bg-category { background-color: var(--category-dark); }
+.dark .bg-glow { background-color: var(--glow-dark); }
 
-.dark .text-text       { color: var(--text-dark); }
-.dark .text-date       { color: var(--date-dark); }
-.dark .text-title      { color: var(--title-dark); }
-.dark .text-subtitle   { color: var(--subtitle-dark); }
-.dark .text-read       { color: var(--read-dark); }
-.dark .text-links      { color: var(--links-dark); }
-.dark .text-underline  { color: var(--underline-dark); }
+
+.dark .text-active { color: var(--active-dark); }
+.dark .text-date { color: var(--date-dark); }
+.dark .text-links { color: var(--links-dark); }
+.dark .text-source { color: var(--source-dark); }
+.dark .text-rail { color: var(--rail-dark); }
+.dark .text-category { color: var(--category-dark); }
+.dark .text-juris { color: var(--juris-dark); }
+.dark .text-context { color: var(--context-dark); }
+.dark .text-title { color: var(--title-dark); }
+.dark .text-background { color: var(--background-dark); }
+.dark .text-subtitle { color: var(--subtitle-dark); }
+.dark .text-read { color: var(--read-dark); }
+.dark .text-glow { color: var(--glow-dark); }
 
 .bg-dot       { background-color: var(--dot) }
 .bg-dotInner  { background-color: var(--dotInner) }
-
 .border-dotRing { border-color: var(--dotRing) }
 .ring-dotRing   { --tw-ring-color: var(--dotRing); }
-
 .ring-hover { --tw-ring-color: var(--ringHover); }
+
+.dark .bg-dot       { background-color: var(--dot-dark) }
+.dark .bg-dotInner  { background-color: var(--dotInner-dark) }
+.dark .border-dotRing { border-color: var(--dotRing-dark) }
+.dark .ring-dotRing   { --tw-ring-color: var(--dotRing-dark); }
+.dark .ring-hover { --tw-ring-color: var(--ringHover-dark); }
+
+.bg-sbBackground { background-color: var(--sbBackground); }
+.bg-sbIcon { background-color: var(--sbIcon); }
+.bg-sbText { background-color: var(--sbText); }
+.bg-sbTitle { background-color: var(--sbTitle); }
+.bg-sbSection { background-color: var(--sbSection); }
+.bg-sbHover { background-color: var(--sbHover); }
+.bg-sbSelectButton { background-color: var(--sbSelectButton); }
+.bg-sbClearButton { background-color: var(--sbClearButton); }
+.bg-sbSelectText { background-color: var(--sbSelectText); }
+.bg-sbClearText { background-color: var(--sbClearText); }
+.bg-sbCheckboxMark { background-color: var(--sbCheckboxMark); }
+.bg-sbCheckboxOutline { background-color: var(--sbCheckboxOutline); }
+.bg-sbCheckboxFiller { background-color: var(--sbCheckboxFiller); }
+.bg-sbActive { background-color: var(--sbActive); }
+.bg-sbPassive { background-color: var(--sbPassive); }
+.bg-sbActiveText { background-color: var(--sbActiveText); }
+.bg-sbPassiveText { background-color: var(--sbPassiveText); }
+.bg-sbIconText {background-color: var(--sbIconText);}
+
+.text-sbBackground { color: var(--sbBackground); }
+.text-sbIcon { color: var(--sbIcon); }
+.text-sbText { color: var(--sbText); }
+.text-sbTitle { color: var(--sbTitle); }
+.text-sbSection { color: var(--sbSection); }
+.text-sbHover { color: var(--sbHover); }
+.text-sbSelectButton { color: var(--sbSelectButton); }
+.text-sbClearButton { color: var(--sbClearButton); }
+.text-sbSelectText { color: var(--sbSelectText); }
+.text-sbClearText { color: var(--sbClearText); }
+.text-sbCheckboxMark { color: var(--sbCheckboxMark); }
+.text-sbCheckboxOutline { color: var(--sbCheckboxOutline); }
+.text-sbCheckboxFiller { color: var(--sbCheckboxFiller); }
+.text-sbActive { color: var(--sbActive); }
+.text-sbPassive { color: var(--sbPassive); }
+.text-sbActiveText { color: var(--sbActiveText); }
+.text-sbPassiveText { color: var(--sbPassiveText); }
+.text-sbIconText {color: var(--sbIconText);}
+
+.dark .bg-sbBackground { background-color: var(--sbBackground-dark); }
+.dark .bg-sbIcon { background-color: var(--sbIcon-dark); }
+.dark .bg-sbText { background-color: var(--sbText-dark); }
+.dark .bg-sbTitle { background-color: var(--sbTitle-dark); }
+.dark .bg-sbSection { background-color: var(--sbSection-dark); }
+.dark .bg-sbHover { background-color: var(--sbHover-dark); }
+.dark .bg-sbSelectButton { background-color: var(--sbSelectButton-dark); }
+.dark .bg-sbClearButton { background-color: var(--sbClearButton-dark); }
+.dark .bg-sbSelectText { background-color: var(--sbSelectText-dark); }
+.dark .bg-sbClearText { background-color: var(--sbClearText-dark); }
+.dark .bg-sbCheckboxMark { background-color: var(--sbCheckboxMark-dark); }
+.dark .bg-sbCheckboxOutline { background-color: var(--sbCheckboxOutline-dark); }
+.dark .bg-sbCheckboxFiller { background-color: var(--sbCheckboxFiller-dark); }
+.dark .bg-sbActive { background-color: var(--sbActive-dark); }
+.dark .bg-sbPassive { background-color: var(--sbPassive-dark); }
+.dark .bg-sbActiveText { background-color: var(--sbActiveText-dark); }
+.dark .bg-sbPassiveText { background-color: var(--sbPassiveText-dark); }
+.dark .bg-sbIconText {background-color: var(--sbIconText-dark);}
+
+.dark .text-sbBackground { color: var(--sbBackground-dark); }
+.dark .text-sbIcon { color: var(--sbIcon-dark); }
+.dark .text-sbText { color: var(--sbText-dark); }
+.dark .text-sbTitle { color: var(--sbTitle-dark); }
+.dark .text-sbSection { color: var(--sbSection-dark); }
+.dark .text-sbHover { color: var(--sbHover-dark); }
+.dark .text-sbSelectButton { color: var(--sbSelectButton-dark); }
+.dark .text-sbClearButton { color: var(--sbClearButton-dark); }
+.dark .text-sbSelectText { color: var(--sbSelectText-dark); }
+.dark .text-sbClearText { color: var(--sbClearText-dark); }
+.dark .text-sbCheckboxMark { color: var(--sbCheckboxMark-dark); }
+.dark .text-sbCheckboxOutline { color: var(--sbCheckboxOutline-dark); }
+.dark .text-sbCheckboxFiller { color: var(--sbCheckboxFiller-dark); }
+.dark .text-sbActive { color: var(--sbActive-dark); }
+.dark .text-sbPassive { color: var(--sbPassive-dark); }
+.dark .text-sbActiveText { color: var(--sbActiveText-dark); }
+.dark .text-sbPassiveText { color: var(--sbPassiveText-dark); }
+.dark .text-sbIconText {color:var(--sbIconText-dark);}
+
+.bg-surface   { background-color: var(--surface); }
+.bg-text      { background-color: var(--text); }
+.bg-muted     { background-color: var(--muted); }
+.bg-accent    { background-color: var(--accent); }
+.bg-underline { background-color: var(--underline); }
+
+.dark .bg-surface   { background-color: var(--surface-dark); }
+.dark .bg-text      { background-color: var(--text-dark); }
+.dark .bg-muted     { background-color: var(--muted-dark); }
+.dark .bg-accent    { background-color: var(--accent-dark); }
+.dark .bg-underline { background-color: var(--underline-dark); }
+
+.text-surface   { color: var(--surface); }
+.text-text      { color: var(--text); }
+.text-muted     { color: var(--muted); }
+.text-accent    { color: var(--accent); }
+.text-underline { color: var(--underline); }
+
+.dark .text-surface   { color: var(--surface-dark); }
+.dark .text-text      { color: var(--text-dark); }
+.dark .text-muted     { color: var(--muted-dark); }
+.dark .text-accent    { color: var(--accent-dark); }
+.dark .text-underline { color: var(--underline-dark); }
+
 
 
 @keyframes heartbeat {
