@@ -1671,7 +1671,7 @@
     ],
     "events":{
       "title":"Defense Rebuts DA on HIPAA Subpoena",
-      "subtitle":"NY defense responds to Seideman's response regarding the Aetna subpoena",
+      "subtitle":"NY defense responds to Seidemann's response regarding the Aetna subpoena",
       "content":"The defense rebuts the NY District Attorney's response and calls for a full evidentiary hearing that would allow for discovery of all written and oral communications between Aetna and the DA's office, as well as testimony from witnesses. ",
       "media":[
 
@@ -1851,7 +1851,10 @@
     "jurisdiction":"Multiple",
     "status":"PUBLISH",
     "links":[
-
+      {
+        "title":"Pennsylvania Courts",
+        "link":"https:\/\/www.pacourts.us\/Storage\/media\/pdfs\/20250919\/150650-cmnoticeoffederalgovtdenialofwrit.pdf"
+      }
     ],
     "events":{
       "title":"Feds Deny Habeas Transport",
@@ -1869,7 +1872,10 @@
     "jurisdiction":"Federal",
     "status":"PUBLISH",
     "links":[
-
+      {
+        "title":"Sanity Docs",
+        "link":"https:\/\/cdn.sanity.io\/files\/detu0qji\/production\/f02bb279d694b6aa4c9e4871528d5f79decc28c7.pdf"
+      }
     ],
     "events":{
       "title":"Motion to Strike Death Penalty",
@@ -1887,7 +1893,10 @@
     "jurisdiction":"Multiple",
     "status":"PUBLISH",
     "links":[
-
+      {
+        "title":"Pennsylvania Courts",
+        "link":"https:\/\/www.pacourts.us\/Storage\/media\/pdfs\/20250924\/141453-defendant'sresponsse-objectiontocmnoticeofwritdenial.pdf"
+      }
     ],
     "events":{
       "title":"Defense Objects to Habeas Denial",
@@ -1905,7 +1914,10 @@
     "jurisdiction":"Federal",
     "status":"PUBLISH",
     "links":[
-
+      {
+        "title":"Sanity Docs",
+        "link":"https:\/\/cdn.sanity.io\/files\/detu0qji\/production\/f5c0018259c9c2c201f58fa2681aefb0bf9622ba.pdf"
+      }
     ],
     "events":{
       "title":"Judge Warns DOJ Over Public Comments",
@@ -1932,6 +1944,190 @@
       "title":"PA Court Cancels Nov. 7 Hearing",
       "subtitle":"PA files an Order for cancellation of November 7th hearing",
       "content":"Because Mangione refuses to appear virtually for court and the federal government refuses to transport him, the PA hearing scheduled for November 7th is officially canceled. ",
+      "media":[
+
+      ]
+    }
+  },
+  {
+    "id":88,
+    "date":"2025-10-03",
+    "category":"Legal Filings",
+    "jurisdiction":"PA",
+    "status":"PUBLISH",
+    "links":[
+      {
+        "title":"Pennsylvania Courts",
+        "link":"https:\/\/www.pacourts.us\/Storage\/media\/pdfs\/20251006\/183448-commnoticeoffeddenialofwritwithletter.pdf"
+      }
+    ],
+    "events":{
+      "title":"PA Files Second Notice of Federal Writ Denial",
+      "subtitle":"PA files a second notice of the federal government's Denial of Habeas Corpus Ad Prosequendum",
+      "content":"The Commonwealth provides an exhibit from the US Attorney's Office for SDNY with a formal denial of the Writ of Habeas Corpus Ad Prosequendum that was sent to them earlier in September.",
+      "media":[
+
+      ]
+    }
+  },
+  {
+    "id":89,
+    "date":"2025-10-08",
+    "category":"Legal Filings",
+    "jurisdiction":"Federal",
+    "status":"PUBLISH",
+    "links":[
+      {
+        "title":"Court Listener",
+        "link":"https:\/\/storage.courtlistener.com\/recap\/gov.uscourts.nysd.640793\/gov.uscourts.nysd.640793.56.0_1.pdf"
+      },
+      {
+        "title":"Court Listener",
+        "link":"https:\/\/storage.courtlistener.com\/recap\/gov.uscourts.nysd.640793\/gov.uscourts.nysd.640793.56.1_1.pdf"
+      }
+    ],
+    "events":{
+      "title":"Government Responds to Judge's Order Regarding Local Rule 23.1 Violations",
+      "subtitle":"Federal government responds to the judge's order regarding the statements made by officials about Mangione",
+      "content":"The Government claims that the social media statements were made by employees of the Department of Justice who are not associated with the prosecution and are therefore not subject to Local Rule 23.1. They also point out that the defense has not identified any actual prejudice from the statements.",
+      "media":[
+
+      ]
+    }
+  },
+  {
+    "id":90,
+    "date":"2025-10-11",
+    "category":"Legal Filings",
+    "jurisdiction":"Federal",
+    "status":"PUBLISH",
+    "links":[
+      {
+        "title":"Court Listener",
+        "link":"https:\/\/storage.courtlistener.com\/recap\/gov.uscourts.nysd.640793\/gov.uscourts.nysd.640793.59.0_1.pdf"
+      },
+      {
+        "title":"Court Listener",
+        "link":"https:\/\/storage.courtlistener.com\/recap\/gov.uscourts.nysd.640793\/gov.uscourts.nysd.640793.59.1_1.pdf"
+      },
+      {
+        "title":"Court Listener",
+        "link":"https:\/\/storage.courtlistener.com\/recap\/gov.uscourts.nysd.640793\/gov.uscourts.nysd.640793.59.2_1.pdf"
+      },
+      {
+        "title":"Court Listener",
+        "link":"https:\/\/storage.courtlistener.com\/recap\/gov.uscourts.nysd.640793\/gov.uscourts.nysd.640793.59.3_1.pdf"
+      }
+    ],
+    "events":{
+      "title":"Defense Motion to Dismiss Counts Three and Four and Suppress Evidence and Statements",
+      "subtitle":"Mangione's defense files a Motion to Dismiss federal counts three and four",
+      "content":"In the federal case, KFA files a Motion to Dismiss counts three and four (murder through use of a firearm and a firearms offense) and to suppress the contents of Mangione's backpack, as well as the statements he made to law enforcement prior to being read his Miranda Rights. The motion goes over, in detail, the flawed Altoona arrest and the warrantless searches.",
+      "media":[
+
+      ]
+    }
+  },
+  {
+    "id":91,
+    "date":"2025-10-14",
+    "category":"Legal Filings",
+    "jurisdiction":"Federal",
+    "status":"PUBLISH",
+    "links":[
+      {
+        "title":"Court Listener",
+        "link":"https:\/\/storage.courtlistener.com\/recap\/gov.uscourts.nysd.640793\/gov.uscourts.nysd.640793.60.0.pdf"
+      }
+    ],
+    "events":{
+      "title":"Motion to Reply to Government's Letter",
+      "subtitle":"Mangione's defense asks the Court for permission to file a reply to the prosecution's October 8th letter",
+      "content":"The defense asks the Court for permission to respond to the Government's letter addressing whether statements made by DoJ personnel\nviolated Local Criminal Rule 23.1",
+      "media":[
+
+      ]
+    }
+  },
+  {
+    "id":92,
+    "date":"2025-10-14",
+    "category":"Legal Filings",
+    "jurisdiction":"Federal",
+    "status":"PUBLISH",
+    "links":[
+      {
+        "title":"Court Listener",
+        "link":"https:\/\/storage.courtlistener.com\/recap\/gov.uscourts.nysd.640793\/gov.uscourts.nysd.640793.62.0.pdf"
+      }
+    ],
+    "events":{
+      "title":"Government Request for Extended Motion Response Schedule",
+      "subtitle":"Federal Government requests additional time to respond to defense pretrial and death penalty motions",
+      "content":"The federal government requests an extension to be able to respond to the defense's motions challenging the death penalty, seeking dismissal of the indictment, certain counts, and suppression of evidence\nand statements. They request a date of November 21st for a consolidated response, rather than two separate dates.",
+      "media":[
+
+      ]
+    }
+  },
+  {
+    "id":93,
+    "date":"2025-10-15",
+    "category":"Legal Filings",
+    "jurisdiction":"Federal",
+    "status":"PUBLISH",
+    "links":[
+      {
+        "title":"Court Listener",
+        "link":"https:\/\/storage.courtlistener.com\/recap\/gov.uscourts.nysd.640793\/gov.uscourts.nysd.640793.63.0.pdf"
+      }
+    ],
+    "events":{
+      "title":"Judge Reschedules Federal Hearing from December 5th to January 9th",
+      "subtitle":"Judge Garnett grants the prosecution's request to consolidate their response filing and reschedules the status conference hearing from December 5th to January 9th",
+      "content":"The federal prosecution's request is granted to file a consolidated response to defense motions on November 21st.  Because this delays the previous schedule, Judge Garnett decides to reschedule the status conference hearing from December 5th to January 9th.",
+      "media":[
+
+      ]
+    }
+  },
+  {
+    "id":94,
+    "date":"2025-10-15",
+    "category":"Legal Filings",
+    "jurisdiction":"PA",
+    "status":"PUBLISH",
+    "links":[
+      {
+        "title":"Pennsylvania Courts",
+        "link":"https:\/\/www.pacourts.us\/Storage\/media\/pdfs\/20251016\/145058-oct.15,2025-order.pdf"
+      }
+    ],
+    "events":{
+      "title":"Order of the Court on Defendant's Availability",
+      "subtitle":"Judge Bernard denies and dismisses defense motions without prejudice",
+      "content":"Judge Bernard of Blair County deems Mangione unavailable for court and denies any previous request for a hearing or other relief.  He continues to direct both the prosecution and defense to continue updates in the event that there is a change in availability.",
+      "media":[
+
+      ]
+    }
+  },
+  {
+    "id":95,
+    "date":"2025-10-17",
+    "category":"Legal Filings",
+    "jurisdiction":"Federal",
+    "status":"PUBLISH",
+    "links":[
+      {
+        "title":"Court Listener",
+        "link":"https:\/\/storage.courtlistener.com\/recap\/gov.uscourts.nysd.640793\/gov.uscourts.nysd.640793.64.0.pdf"
+      }
+    ],
+    "events":{
+      "title":"Defense Response to Continued Local Rule 23.1 Violations",
+      "subtitle":"Mangione's defense seeks dismissal of the federal indictment as they claim he is being unfairly maligned and slandered by government officials and is not able to get a fair trial",
+      "content":"Mangione's defense team comments further on the prejudicial statements and identifies exactly how they have harmed their client. They point to the political coordination between the White House and the Department of Justice and also question the influence of UnitedHealth on the case, asking for discovery of possible collusion to prejudice Mangione.  As a result, they seek to dismiss the federal case.",
       "media":[
 
       ]
