@@ -42,7 +42,6 @@
   animation: pulse-ring 2s ease-in-out infinite;
 }
 
-
 @media (hover: none) {
   .media-nav .nav-dots {
     opacity: 1 !important;
@@ -51,4 +50,112 @@
   .media-nav.ui-visible .opacity-0 {
     opacity: 1 !important;
   }
+}
+
+@theme {
+  --color-mainBackground: #F8F9FA;
+  --color-mainTitle: #23272A;
+  --color-mainLinks: #5865F2;
+  --color-mainText: #2C2F33;
+  --color-mainScroll: #5865F2;
+  --color-mainHeart: #F23F43;
+
+  --color-photoZoom: #5865F2;
+  --color-photoCamera: #80848E;
+  --color-photoArrow: #5865F2;
+  --color-photoIndexTop: #23272A;
+  --color-photoBackground: #FFFFFF;
+  --color-photoIndexBottomActive: #5865F2;
+  --color-photoIndexBottomNonActive: #B5BAC1;
+  --color-photoText: #23272A;
+
+  --color-active: #5865F2;
+  --color-date: #23272A;
+  --color-title: #23272A;
+  --color-background: #FFFFFF;
+  --color-read: #5865F2;
+  --color-source: #5865F2;
+  --color-links: #5865F2;
+  --color-subtitle: #949BA4;
+  --color-rail: #E3E5E8;
+  --color-context: #23272A;
+  --color-juris: #FFFFFF;
+  --color-category: #5865F2;
+
+  --color-ringHover: #5865F2;
+  --color-dot: #5865F2;
+  --color-dotInner: #B5BAC1;
+  --color-dotRing: #5865F24D;
+
+  --color-sbBackground: #F2F3F5;
+  --color-sbIcon: #80848E;
+  --color-sbText: #23272A;
+  --color-sbTitle: #23272A;
+  --color-sbSection: #E3E5E8;
+  --color-sbHover: #E3E5E8;
+  --color-sbSelectButton: #5865F2;
+  --color-sbClearButton: #4752C4;
+  --color-sbSelectText: #FFFFFF;
+  --color-sbClearText: #FFFFFF;
+  --color-sbCheckboxMark: #5865F2;
+  --color-sbCheckboxOutline: #B5BAC1;
+  --color-sbCheckboxFiller: #FFFFFF;
+  --color-sbActive: #5865F2;
+  --color-sbPassive: #80848E;
+  --color-sbActiveText: #FFFFFF;
+  --color-sbPassiveText: #23272A;
+}
+
+.dark {
+  --color-mainBackground: #2B2D31;
+  --color-mainTitle: #DBDEE1;
+  --color-mainLinks: #5865F2;
+  --color-mainText: #DBDEE1;
+  --color-mainScroll: #5865F2;
+  --color-mainHeart: #F23F43;
+
+  --color-photoZoom: #5865F2;
+  --color-photoCamera: #80848E;
+  --color-photoArrow: #4752C4;
+  --color-photoIndexTop: #DBDEE1;
+  --color-photoBackground: #2B2D31;
+  --color-photoIndexBottomActive: #4752C4;
+  --color-photoIndexBottomNonActive: #80848E;
+  --color-photoText: #DBDEE1;
+
+  --color-active: #4752C4;
+  --color-date: #DBDEE1;
+  --color-title: #DBDEE1;
+  --color-background: #1E1F22;
+  --color-read: #5865F2;
+  --color-source: #5865F2;
+  --color-links: #5865F2;
+  --color-subtitle: #949BA4;
+  --color-rail: #313338;
+  --color-context: #DBDEE1;
+  --color-juris: #FFFFFF;
+  --color-category: #5865F2;
+
+  --color-ringHover: #4752C4;
+  --color-dot: #5865F2;
+  --color-dotInner: #80848E;
+  --color-dotRing: #5865F259;
+
+  --color-sbBackground: #2B2D31;
+  --color-sbIcon: #B5BAC1;
+  --color-sbText: #FFFFFF;
+  --color-sbTitle: #FFFFFF;
+  --color-sbSection: #313338;
+  --color-sbHover: #3D3E45;
+  --color-sbSelectButton: #5865F2;
+  --color-sbClearButton: #4752C4;
+  --color-sbSelectText: #FFFFFF;
+  --color-sbClearText: #FFFFFF;
+  --color-sbCheckboxMark: #5865F2;
+  --color-sbCheckboxOutline: #80848E;
+  --color-sbCheckboxFiller: #80848E;
+  --color-sbActive: #5865F2;
+  --color-sbPassive: #80848E;
+  --color-sbActiveText: #FFFFFF;
+  --color-sbPassiveText: #B5BAC1;
 }

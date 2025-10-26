@@ -1,5 +1,5 @@
-import { useState } from "react"
-import { useMediaQuery } from 'react-responsive'
+import { useState, useEffect } from "react"
+import { useMediaQuery } from "react-responsive"
 
 import { cleanItems } from "../data/items"
 import Sidebar from "@sidebar/components/Sidebar"
@@ -15,19 +15,25 @@ import rawItems from "../data/data.json"
 const items = cleanItems(rawItems)
 
 export default function App() {
+  const [isDark, setIsDark] = useState(() => {
+    if (typeof window === "undefined") return false
+    const saved = localStorage.getItem("theme")
+    if (saved) return saved === "dark"
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+  })
 
-  const [isDark, setIsDark] = useState(
-    typeof document !== "undefined" &&
-      document.documentElement.classList.contains("dark"),
-  )
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", isDark)
+  }, [isDark])
 
   const toggleTheme = () => {
     const next = !isDark
     setIsDark(next)
     document.documentElement.classList.toggle("dark", next)
+    localStorage.setItem("theme", next ? "dark" : "light")
   }
 
-  const isMobileDevice = useMediaQuery({ query: '(pointer: coarse)' })
+  const isMobileDevice = useMediaQuery({ query: "(pointer: coarse)" })
 
   const {
     search,
@@ -69,7 +75,6 @@ export default function App() {
           Luigi Mangione Event Timeline
         </h1>
 
-
         {isMobileDevice && (
           <p className="mt-2 text-xs opacity-80">
             Note: The mobile layout is still being refined. Some elements may not display perfectly yet.
@@ -103,6 +108,7 @@ export default function App() {
           <EmptyState isFiltered={isFiltered} searchQuery={search.query} />
         )}
       </main>
+
       <ScrollToTopButton />
       <CookieBanner />
     </div>
