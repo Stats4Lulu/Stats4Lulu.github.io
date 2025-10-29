@@ -22,10 +22,9 @@ export default function DateFilter({
 
   const showRange = () => {
     const { from, to } = dateRange
-    if (from && to)
-      return `${formatDate(from, dateFormat)} – ${formatDate(to, dateFormat)}`
-    if (from) return `From ${formatDate(from, dateFormat)}`
-    if (to) return `Until ${formatDate(to, dateFormat)}`
+    if (from && to) return `${formatDate(from)} – ${formatDate(to)}`
+    if (from) return `From ${formatDate(from)}`
+    if (to) return `Until ${formatDate(to)}`
     return 'No date selected'
   }
 
@@ -45,11 +44,11 @@ export default function DateFilter({
     <CollapsibleSection title="Date filter" icon={<CalendarDays size={16} />}>
       <div className="space-y-4">
         <div className="border-sbIcon/40 bg-sbSection/60 text-sbText dark:border-sbIcon-dark/40 dark:bg-sbSection-dark/60 dark:text-sbText-dark rounded-lg border p-3">
-          <p className="text-sm">{showRange()}</p>{' '}
+          <p className="text-sm">{showRange()}</p>
           {(dateRange.from || dateRange.to) && (
             <button
               onClick={clear}
-              className="bg-red-600 dark:bg-red-800 text-white dark:text-black hover:bg-accent mt-2 inline-flex items-center gap-1 rounded px-2 py-1 text-xs text-white transition-colors"
+              className="bg-red-600 dark:bg-red-800 text-white dark:text-black hover:bg-accent mt-2 inline-flex items-center gap-1 rounded px-2 py-1 text-xs transition-colors"
             >
               <RotateCcw size={12} /> Clear filter
             </button>
@@ -62,8 +61,8 @@ export default function DateFilter({
             type="date"
             value={dateRange.from?.toISOString().substring(0, 10) || ''}
             min={min}
-            max={max}
-            onChange={(label) => handleChange('from', label.target.value)}
+            max={dateRange.to?.toISOString().substring(0, 10) || max}
+            onChange={(e) => handleChange('from', e.target.value)}
             className="border-muted/40 bg-sbBackground text-sbText focus:ring-sbActive dark:bg-sbBackground-dark dark:border-muted-dark/40 dark:text-sbText-dark w-full rounded-lg border px-3 py-2 text-sm focus:ring-2 focus:outline-none"
           />
         </div>
@@ -72,10 +71,10 @@ export default function DateFilter({
           <label className="mb-1 block text-sbText dark:text-sbText-dark text-xs font-medium">To date</label>
           <input
             type="date"
-            value={dateRange.from?.toISOString().substring(0, 10) || ''}
-            min={min}
+            value={dateRange.to?.toISOString().substring(0, 10) || ''}
+            min={dateRange.from?.toISOString().substring(0, 10) || min}
             max={max}
-            onChange={(label) => handleChange('to', label.target.value)}
+            onChange={(e) => handleChange('to', e.target.value)}
             className="border-sbIcon/40 bg-sbBackground text-sbText focus:ring-sbActive dark:bg-sbBackground-dark dark:border-muted-dark/40 dark:text-sbText-dark w-full rounded-lg border px-3 py-2 text-sm focus:ring-2 focus:outline-none"
           />
         </div>

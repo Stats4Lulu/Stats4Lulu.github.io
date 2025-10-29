@@ -19,23 +19,13 @@ export const isBeforeMin = (dateStr: string, min: string | Date): boolean => {
   return date < m
 }
 
-export function formatDate(
-  dateStr: string | Date
-): string {
-  let date: Date;
-
-  if (typeof dateStr === 'string') {
-    // Parse manually to avoid timezone issues
-    const [year, month, day] = dateStr.split('-').map(Number);
-    date = new Date(year, month - 1, day); // Local date
-  } else {
-    date = dateStr;
-  }
-
+export function formatDate(dateStr: string | Date): string {
+  const date = typeof dateStr === 'string' ? new Date(dateStr) : dateStr;
   return date.toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
-    day: '2-digit'
+    day: '2-digit',
+    timeZone: 'UTC'
   });
 }
 

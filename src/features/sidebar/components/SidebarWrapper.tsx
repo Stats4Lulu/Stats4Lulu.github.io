@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 import { Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -9,6 +9,14 @@ export default function SidebarWrapper({
   children: React.ReactNode
 }) {
   const [isOpen, setIsOpen] = useState(false)
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.userSelect = 'none'
+    } else {
+      document.body.style.userSelect = ''
+    }
+  }, [isOpen])
 
   return (
     <>

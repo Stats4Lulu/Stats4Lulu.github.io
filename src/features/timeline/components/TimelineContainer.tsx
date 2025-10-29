@@ -19,7 +19,7 @@ export default function TimelineContainer({
         mode={mode}
         sizeMode={sizeMode}
         searchQuery={searchQuery}
-        formatDate={(d) => formatDate(d, dateFormat)}
+        formatDate={(d) => formatDate(d)}
         enableReadMore={true}
       />
     </>

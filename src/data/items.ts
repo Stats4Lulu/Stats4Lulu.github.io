@@ -10,6 +10,8 @@ export function cleanItems(raw: unknown): TimelineItem[] {
       console.warn(`Duplicate id dropped: ${item.id}`, item)
       continue
     }
+    if (!item.category) item.category = 'N/A'
+    if (!item.jurisdiction) item.jurisdiction = 'N/A'
     seen.add(item.id)
     deduped.push(item)
   }

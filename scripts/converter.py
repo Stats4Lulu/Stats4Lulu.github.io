@@ -27,7 +27,7 @@ def convert_images(row: pd.Series, image_cols: List[str]):
         val = row.get(col)
         if pd.notna(val) and str(val).strip():
             fname = re.sub(r"^\d{4}-\d{2}-\d{2}\s+", "", str(val))
-            url = fname.replace(" ", "_").lower()
+            url = fname.replace(" ", "_").lower().rstrip()
             media.append({"type": "image", "title": os.path.splitext(fname)[0], "url": url})
     return media
 

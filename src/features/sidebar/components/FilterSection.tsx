@@ -68,7 +68,7 @@ export default function FilterSection({
                 <div
                   className={`flex h-4 w-4 items-center justify-center rounded border-2 transition-colors ${checked ? 'bg-accent border-accent' : 'border-muted bg-transparent'}`}
                 >
-                  {checked && <Check size={12} className="text-sbCheckboxMark dark:text-sbCheckboxMark-dark" />}
+                  {checked && <Check size={12} strokeWidth={3} className="text-sbCheckboxMark dark:text-sbCheckboxMark-dark" />}
                 </div>
                 <span
                   className={`flex-1 text-sm font-medium ${checked ? 'text-sbText' : 'text-sbText/70 dark:text-sbText-dark/70'}`}

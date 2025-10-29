@@ -20,7 +20,7 @@ export default function SearchBar({
         onChange={(e) => onSearch(e.target.value)}
         placeholder="Search timeline..."
         aria-label="Search timeline"
-        className="focus:ring-sbActive bg-sbBackground border-sbSection text-sbText placeholder-sbSection dark:bg-sbBackground-dark dark:border-sbSection-dark dark:text-sbText-dark dark:placeholder-sbSetion-dark w-full rounded-lg border py-3 pr-10 pl-10 text-sm transition-colors focus:ring-2 focus:outline-none"
+        className="focus:ring-sbActive bg-sbBackground border-sbSection text-sbText placeholder-sbSection-dark dark:bg-sbBackground-dark dark:border-sbSection-dark dark:text-sbText-dark dark:placeholder-sbSection-dark w-full rounded-lg border py-3 pr-10 pl-10 text-sm transition-colors focus:ring-2 focus:outline-none"
       />
 
       {searchQuery && (
