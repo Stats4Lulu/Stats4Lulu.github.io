@@ -61,13 +61,13 @@
   --color-mainHeart: #F23F43;
 
   --color-photoZoom: #5865F2;
-  --color-photoCamera: #80848E;
+  --color-photoCamera: #5865F2;
   --color-photoArrow: #5865F2;
-  --color-photoIndexTop: #23272A;
+  --color-photoIndexTop: #DBDEE1;
   --color-photoBackground: #FFFFFF;
   --color-photoIndexBottomActive: #5865F2;
   --color-photoIndexBottomNonActive: #B5BAC1;
-  --color-photoText: #23272A;
+  --color-photoText: #5865F2;
 
   --color-active: #5865F2;
   --color-date: #23272A;
@@ -117,7 +117,7 @@
   --color-photoZoom: #5865F2;
   --color-photoCamera: #80848E;
   --color-photoArrow: #4752C4;
-  --color-photoIndexTop: #DBDEE1;
+  --color-photoIndexTop: #23272A;
   --color-photoBackground: #2B2D31;
   --color-photoIndexBottomActive: #4752C4;
   --color-photoIndexBottomNonActive: #80848E;
