@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { useMediaQuery } from "react-responsive"
+import { Helmet } from "react-helmet-async"
 
 import { cleanItems } from "../data/items"
 import Sidebar from "@sidebar/components/Sidebar"
@@ -8,7 +9,7 @@ import FilterStatusBar from "@shared/components/FilterStatusBar"
 import TimelineContainer from "@timeline/components/TimelineContainer"
 import EmptyState from "@shared/components/EmptyState"
 import Credits from "@shared/components/Credits"
-import ScrollToTopButton from "@shared/components/ScrollToTopButton"
+import ScrollToTopButton from "@/shared/components/ScrollButton"
 import { useTimelineFilters } from "@timeline/hooks/useTimelineFilters"
 import rawItems from "../data/data.json"
 
@@ -48,6 +49,22 @@ export default function App() {
 
   return (
     <div className="bg-mainBackground text-mainText dark:bg-mainBackground-dark dark:text-mainText-dark min-h-screen transition-colors">
+
+      <Helmet>
+        <title>Luigi Mangione Event Timeline</title>
+        <meta name="description" content="Explore key moments and updates in Luigi Mangione's case - By Stats4Lulu & JAE "/>
+        <meta name="author" content="Stats4Lulu & JAE" />
+        <meta name="keywords" content="Luigi Mangione, Stats4Lulu, Luigistics, timeline, advocacy, events" />
+
+        <meta property="og:title" content="Luigi Mangione Event Timeline" />
+        <meta property="og:description" content="Explore key moments and updates in Luigi Mangione's case - By Stats4Lulu & JAE"/>
+        <meta property="og:url" content="https://stats4lulu.github.io" />
+        <meta property="og:type" content="website" />
+
+        <meta name="twitter:title" content="Luigi Mangione Event Timeline" />
+        <meta name="twitter:description" content="Explore key moments and updates in Luigi Mangione's case - By Stats4Lulu & JAE"/>
+        <meta name="twitter:url" content="https://stats4lulu.github.io" />
+      </Helmet>
 
       <Sidebar
         toggleTheme={toggleTheme}
@@ -110,7 +127,9 @@ export default function App() {
       </main>
 
       <ScrollToTopButton />
-      <CookieBanner />
+      <CookieBanner 
+        bgColor={"bg-mainLinks"}
+      />
     </div>
   )
 }

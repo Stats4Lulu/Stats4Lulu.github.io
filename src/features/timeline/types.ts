@@ -21,6 +21,19 @@ export type TimelineItem = {
   }
 }
 
+export type CardLinks = {
+  title: string;
+  buttonColor: string;
+
+  sections: Array<{
+    name: string;
+    links: Array<{
+      text: string;
+      link: string;
+    }>;
+  }>
+}
+
 export interface Timelinerops {
   items: TimelineItem[]
   mode: Mode
@@ -71,6 +84,28 @@ export interface TimelineProps {
   useReadMore: boolean
   displayDate: (date: string) => string
   highlightCardsOnHover: boolean
+}
+
+export type HomePageCardProps = {
+  card: CardLinks
+  i: number
+  showSecondary?: boolean
+}
+
+export type CardSectionProps = {
+  section: SectionItem
+  i: number
+  buttonColor: string
+}
+
+export type SectionItem = {
+  name: String
+  links: LinkItem[];
+}
+
+export type LinkItem = {
+  text: string
+  link: string
 }
 
 export type Mode = 'VERTICAL' | 'VERTICAL_ALTERNATING'

@@ -1,11 +1,36 @@
-import './index.css'
+import "./index.css";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { HelmetProvider } from "react-helmet-async";  // Import HelmetProvider
+import App from "./App.tsx";
+import HomePage from "./HomePage.tsx";
 
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
+function RedirectHandler() {
+  const navigate = useNavigate();
 
-createRoot(document.getElementById('root')!).render(
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const redirect = params.get("redirect");
+    if (redirect) {
+      navigate(redirect, { replace: true });
+    }
+  }, [navigate]);
+
+  return null;
+}
+
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
-  </StrictMode>,
-)
+    <HelmetProvider>
+      <Router basename="/">
+        <RedirectHandler />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/timeline" element={<App />} />
+        </Routes>
+      </Router>
+    </HelmetProvider>
+  </StrictMode>
+);

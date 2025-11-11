@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+      // Preserve path and redirect back to index.html
+      const path = window.location.pathname;
+      const newUrl = window.location.origin + "/index.html?redirect=" + path;
+      window.location.replace(newUrl);
+    </script>
+  </head>
+  <body></body>
+</html>

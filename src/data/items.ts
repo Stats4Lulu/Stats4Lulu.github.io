@@ -1,4 +1,4 @@
-import type { TimelineItem } from '@timeline/types'
+import type { CardLinks, TimelineItem } from '@timeline/types'
 
 export function cleanItems(raw: unknown): TimelineItem[] {
   const seen = new Set<number>()
@@ -19,3 +19,16 @@ export function cleanItems(raw: unknown): TimelineItem[] {
   return deduped
 }
 
+export function cleanLinkItems(raw: any[]): CardLinks[] {
+  return raw.map(card => ({
+    title: card.title,
+    buttonColor: card.buttonColor,
+    sections: card.sections.map((section: any) => ({
+      name: section.name,
+      links: section.links.map((linkArr: [string, string]) => ({
+        text: linkArr[0],
+        link: linkArr[1],
+      })),
+    })),
+  }));
+}
