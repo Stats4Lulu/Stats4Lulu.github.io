@@ -1,10 +1,9 @@
 [
     {
-      "title": "Products",
       "buttonColor": "var(--color-firstCard)",
       "sections": [
         {
-          "name": "Products",
+          "name": "Projects",
           "links": [
             [
               "Stats4Lulu Dashboard",
@@ -37,7 +36,6 @@
       ]
     },
     {
-      "title": "Collabs",
       "buttonColor": "var(--color-secondCard)",
       "sections": [
         {
@@ -85,7 +83,6 @@
       ]
     },
     {
-      "title": "Official Links",
       "buttonColor": "var(--color-thirdCard)",
       "sections": [
         {

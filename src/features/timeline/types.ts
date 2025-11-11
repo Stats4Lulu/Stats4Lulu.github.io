@@ -22,7 +22,6 @@ export type TimelineItem = {
 }
 
 export type CardLinks = {
-  title: string;
   buttonColor: string;
 
   sections: Array<{

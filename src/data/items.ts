@@ -21,7 +21,6 @@ export function cleanItems(raw: unknown): TimelineItem[] {
 
 export function cleanLinkItems(raw: any[]): CardLinks[] {
   return raw.map(card => ({
-    title: card.title,
     buttonColor: card.buttonColor,
     sections: card.sections.map((section: any) => ({
       name: section.name,
