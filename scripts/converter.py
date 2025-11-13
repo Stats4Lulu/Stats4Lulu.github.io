@@ -26,7 +26,10 @@ def convert_images(row: pd.Series, image_cols: List[str]):
     for col in image_cols:
         val = row.get(col)
         if pd.notna(val) and str(val).strip():
-            fname = re.sub(r"^\d{4}-\d{2}-\d{2}\s+", "", str(val))
+            # clean up file name, so no more weird newlines at the end of image
+            clean = str(val).replace("\n", "").replace("\r", "").strip()
+
+            fname = re.sub(r"^\d{4}-\d{2}-\d{2}\s+", "", clean)
             url = fname.replace(" ", "_").lower().rstrip()
             media.append({"type": "image", "title": os.path.splitext(fname)[0], "url": url})
     return media
