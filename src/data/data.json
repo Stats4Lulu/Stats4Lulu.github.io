@@ -13,8 +13,8 @@
     ],
     "events":{
       "title":"Brian Thompson Murdered",
-      "subtitle":"Brian Thompson, CEO of UnitedHealth, shot and killed in Midtown, Manhattan",
-      "content":"UnitedHealth CEO Brian Thompson is shot and killed in Midtown Manhattan at 6:44 AM. Shell casings at the scene of the crime had the words \"delay\", \"deny\", and \"depose\" written on them (misreported by law enforcement as \"deny\", \"defend\", and \"depose\"). This event began the 5-day manhunt to find the suspect.",
+      "subtitle":"Brian Thompson, CEO of UnitedHealthcare, shot and killed in Midtown, Manhattan",
+      "content":"UnitedHealthcare CEO Brian Thompson is shot and killed in Midtown Manhattan at 6:44 AM. Shell casings at the scene of the crime had the words \"delay\", \"deny\", and \"depose\" written on them (misreported by law enforcement as \"deny\", \"defend\", and \"depose\"). This event began the 5-day manhunt to find the suspect.",
       "media":[
         {
           "type":"image",
@@ -230,7 +230,7 @@
     "events":{
       "title":"Tom Dickey Retained",
       "subtitle":"Tom Dickey is retained as Mangione's PA lawyer",
-      "content":"Mangione retains Thomas Dickey as his PA lawyer. Dickey is a well-known, top defense lawyer in the USA who happens to practice in Altoona. He is perhaps most recognized for his ability to get evidence thrown out.",
+      "content":"Mangione retains Tom Dickey as his PA lawyer. Dickey is a well-known, top defense lawyer in the USA who happens to practice in Altoona. He is perhaps most recognized for his ability to get evidence thrown out.",
       "media":[
         {
           "type":"image",
@@ -267,7 +267,7 @@
     "events":{
       "title":"PA Court Appearance; Bail Denied",
       "subtitle":"Luigi Mangione is taken to PA court",
-      "content":"As Mangione enters PA court, he yells to the media, \"Your coverage of this event has been completely out of touch, and an insult to the intelligence of the American people and their lived experience.\" In court, Mangione meets Thomas Dickey for the first time. Dickey says that Mangione would be contesting extradition, and he requested bail to be set. He was denied bail.\n",
+      "content":"As Mangione enters PA court, he yells to the media, \"Your coverage of this event has been completely out of touch, and an insult to the intelligence of the American people and their lived experience.\" In court, Mangione meets Tom Dickey for the first time. Dickey says that Mangione would be contesting extradition, and he requested bail to be set. He was denied bail.\n",
       "media":[
         {
           "title":"YouTube",
@@ -348,7 +348,7 @@
     "events":{
       "title":"KFA Retained",
       "subtitle":"Mangione retains Karen Friedman Agnifilo",
-      "content":"An expert in \"complex and sensitive criminal matters,\" Karen Friedman Agnifilo of Agnifilo Intrator takes on Mangione's case.",
+      "content":"An expert in \"complex and sensitive criminal matters,\" Karen Friedman Agnifilo of Agnifilo Intrater takes on Mangione's case.",
       "media":[
         {
           "type":"image",
@@ -460,7 +460,7 @@
         {
           "type":"image",
           "title":"PA Court Photo",
-          "url":"pa_court_photo.jpg"
+          "url":"pa_court_photo.jpg\n"
         },
         {
           "type":"image",
@@ -550,7 +550,7 @@
     "events":{
       "title":"First Federal Appearance",
       "subtitle":"Mangione appears in his first federal court appearance",
-      "content":"Mangione appears in federal court. Federal prosecutors file a federal complaint against Mangione, adding four more charges to his case: two counts of stalking, a firearms offence, and murder through the use of a firearm.",
+      "content":"Mangione appears in federal court. Federal prosecutors file a federal complaint against Mangione, adding four more charges to his case: two counts of stalking, a firearms offense, and murder through the use of a firearm.",
       "media":[
         {
           "type":"image",
@@ -710,7 +710,7 @@
         {
           "type":"image",
           "title":"February Court Photo",
-          "url":"february_court_photo_1.jpg"
+          "url":"february_court_photo.jpg"
         },
         {
           "type":"image",
@@ -744,7 +744,7 @@
         {
           "type":"image",
           "title":"Inventory Photo 1",
-          "url":"inventory_photo_1.jpg"
+          "url":"inventory_photo_1.jpg\n"
         },
         {
           "type":"image",
@@ -795,7 +795,7 @@
         {
           "type":"image",
           "title":"Letter Log Photo 1",
-          "url":"letter_log_photo_1.jpg"
+          "url":"letter_log_photo_1.jpg\n"
         },
         {
           "type":"image",
@@ -990,7 +990,7 @@
     ],
     "events":{
       "title":"AG Seeks Death Penalty",
-      "subtitle":"Attorney General directs federal prosecutors to seek the death penalty for Mangione\n",
+      "subtitle":"Attorney General directs federal prosecutors to seek the death penalty for Mangione\n\n",
       "content":"Attorney General Pam Bondi debuts her new Instagram account with a request for federal prosecutors to seek the death penalty in Mangione's case. Meant to send a message, this statement aligns with President Trump's goals for the ramping up of capital punishment in the US.",
       "media":[
         {
@@ -1117,7 +1117,7 @@
     "events":{
       "title":"Federal Indictment",
       "subtitle":"Mangione is federally indicted",
-      "content":"Mangione is indicted in the federal case on four counts: stalking - traveling in interstate commerce, stalking - use of interstate facilities, murder through use of a firearm, and a firearms offence.",
+      "content":"Mangione is indicted in the federal case on four counts: stalking - traveling in interstate commerce, stalking - use of interstate facilities, murder through use of a firearm, and a firearms offense.",
       "media":[
 
       ]
@@ -1504,7 +1504,7 @@
     "events":{
       "title":"Motion for Outline of Aggravating Factors",
       "subtitle":"Mangione's defense files motion to request an informational outline of certain aggravating factors",
-      "content":"Mangione's defence asks federal prosecutors to explain exactly why they are seeking the death penalty, as they have only provided \"barebones, vague allegations\" about Mangione. Mangione's defense contends that the federal trial, planned for 2026, is moving the case far faster than typical death-penalty-eligible cases.",
+      "content":"Mangione's defense asks federal prosecutors to explain exactly why they are seeking the death penalty, as they have only provided \"barebones, vague allegations\" about Mangione. Mangione's defense contends that the federal trial, planned for 2026, is moving the case far faster than typical death-penalty-eligible cases.",
       "media":[
 
       ]
@@ -1525,7 +1525,7 @@
     "events":{
       "title":"Defense Memorandum on Speedy Trial",
       "subtitle":"PA defense files memorandum",
-      "content":"Thomas Dickey files a memorandum stating that Mangione's right to a speedy trial is being infringed upon in the PA case. The PA case has been ready for trial since March 7, yet the federal case has prevented it from going to trial. Dickey seeks to challenge this and get the speedy trial clock going.",
+      "content":"Tom Dickey files a memorandum stating that Mangione's right to a speedy trial is being infringed upon in the PA case. The PA case has been ready for trial since March 7, yet the federal case has prevented it from going to trial. Dickey seeks to challenge this and get the speedy trial clock going.",
       "media":[
 
       ]
@@ -1887,6 +1887,27 @@
     }
   },
   {
+    "id":83,
+    "date":"2025-09-23",
+    "category":"Legal Filings",
+    "jurisdiction":"Federal",
+    "status":"PUBLISH",
+    "links":[
+      {
+        "title":"Sanity Docs",
+        "link":"https:\/\/cdn.sanity.io\/files\/detu0qji\/production\/3d69549b9777d8d26b5c32623bab876d1c1ebe4f.pdf"
+      }
+    ],
+    "events":{
+      "title":"Defense Files Death Penalty Letter",
+      "subtitle":"Mangione's defense files a supplemental letter regarding the death penalty",
+      "content":"Mangione's defense files a supplemental letter to their motion to challenge the constitutionality of the death penalty in the wake of recent comments made by officials - including President Trump - regarding Mangione. The letter features several screenshots of these prejudicial and false statements being made.",
+      "media":[
+
+      ]
+    }
+  },
+  {
     "id":84,
     "date":"2025-09-23",
     "category":"Legal Filings",
@@ -1901,7 +1922,7 @@
     "events":{
       "title":"Defense Objects to Habeas Denial",
       "subtitle":"Mangione's PA defense files an objection to the denial of Habeas Corpus Ad Prosequendum",
-      "content":"Mangione's PA defense objects to the federal government's blocking of his ability to be transported for a hearing. Thomas Dickey states that this denial by the government was not filed properly, as the writ was merely an email sent by a data analyst. He once again says that Mangione has every right to attend his hearings in person.",
+      "content":"Mangione's PA defense objects to the federal government's blocking of his ability to be transported for a hearing. Tom Dickey states that this denial by the government was not filed properly, as the writ was merely an email sent by a data analyst. He once again says that Mangione has every right to attend his hearings in person.",
       "media":[
 
       ]
