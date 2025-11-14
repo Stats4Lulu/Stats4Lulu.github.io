@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { ArrowUp } from 'lucide-react'
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { animateScroll as scroll } from 'react-scroll'
 
 interface Props {
   statementRef: any
@@ -9,28 +10,44 @@ interface Props {
 export default function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false)
 
-  useEffect(
-    () => {
-      const onScroll = () => setIsVisible(window.scrollY > 300) //300 = arbitrary; might be too low
-      window.addEventListener('scroll', onScroll)
-      return () => window.removeEventListener('scroll', onScroll)
-    },
-    [], //render once
-  )
+  useEffect(() => {
+    const onScroll = () => setIsVisible(window.scrollY > 300) // 300 = arbitrary; might be too much or too little
+    window.addEventListener('scroll', onScroll)
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   if (!isVisible) return null
 
+  const handleClick = () => {
+    const distance = window.scrollY
+    const farThreshold = window.innerHeight * 2
+
+    if (distance > farThreshold) {
+      // Big jump: just snap to top to avoid long 'flashing' animation
+      scroll.scrollToTop({
+        duration: 0,
+      })
+    } else {
+      // Nearby:smooth and pretty
+      scroll.scrollToTop({
+        duration: 500,
+        smooth: 'easeInOutQuart',
+      })
+    }
+  }
+
   return (
     <button
-      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      onClick={handleClick}
       aria-label="Scroll to top"
-      //reminder: z = mobile only!
+      // reminder: z = mobile only!
       className="bg-mainScroll hover:bg-mainScroll dark:bg-mainScroll-dark fixed right-6 bottom-6 z-50 flex h-12 w-12 items-center justify-center rounded-full text-white shadow-lg transition-transform duration-300 hover:scale-110 active:scale-95"
     >
       <ArrowUp size={22} strokeWidth={2.5} />
     </button>
   )
 }
+
 
 export function ScrollToTopOrBottomButton({ 
   statementRef 

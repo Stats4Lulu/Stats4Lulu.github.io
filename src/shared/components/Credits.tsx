@@ -14,7 +14,7 @@ export default function TimelineCredits() {
         />
         <span>by</span>
         <a
-          href="https://tinyurl.com/stats4lulu"
+          href="https://stats4lulu.github.io/"
           target="_blank"
           rel="noopener noreferrer"
           className="font-medium text-mainLinks hover:text-mainLinks/80 hover:underline transition-all"

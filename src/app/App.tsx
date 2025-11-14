@@ -12,6 +12,7 @@ import Credits from "@shared/components/Credits"
 import ScrollToTopButton from "@/shared/components/ScrollButton"
 import { useTimelineFilters } from "@timeline/hooks/useTimelineFilters"
 import rawItems from "../data/data.json"
+import MonthJump from "@/shared/components/MonthJump"
 
 const items = cleanItems(rawItems)
 
@@ -99,6 +100,8 @@ export default function App() {
         )}
 
         <div className="mb-20"></div>
+
+        <MonthJump items={filteredItems} mode={layout.mode} />
 
         <FilterStatusBar
           isFiltered={isFiltered || search.query !== ""}
