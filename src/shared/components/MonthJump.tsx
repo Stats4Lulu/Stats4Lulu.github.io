@@ -33,6 +33,7 @@ export default function MonthJump({ items, mode }: Props) {
         label: date.toLocaleDateString('en-US', {
           month: 'long',
           year: 'numeric',
+          timeZone: 'UTC'
         }),
       }
     })
