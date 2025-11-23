@@ -53,18 +53,18 @@ export default function App() {
 
       <Helmet>
         <title>Luigi Mangione Event Timeline</title>
-        <meta name="description" content="Explore key moments and updates in Luigi Mangione's case - By Stats4Lulu & JAE "/>
+        <meta name="description" content="Explore key moments and updates in Luigi Mangione's case - By Stats4Lulu & JAE"/>
         <meta name="author" content="Stats4Lulu & JAE" />
         <meta name="keywords" content="Luigi Mangione, Stats4Lulu, Luigistics, timeline, advocacy, events" />
 
         <meta property="og:title" content="Luigi Mangione Event Timeline" />
         <meta property="og:description" content="Explore key moments and updates in Luigi Mangione's case - By Stats4Lulu & JAE"/>
-        <meta property="og:url" content="https://stats4lulu.github.io" />
+        <meta property="og:url" content="https://stats4lulu.github.io/timeline" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:title" content="Luigi Mangione Event Timeline" />
         <meta name="twitter:description" content="Explore key moments and updates in Luigi Mangione's case - By Stats4Lulu & JAE"/>
-        <meta name="twitter:url" content="https://stats4lulu.github.io" />
+        <meta name="twitter:url" content="https://stats4lulu.github.io/timeline" />
       </Helmet>
 
       <Sidebar
