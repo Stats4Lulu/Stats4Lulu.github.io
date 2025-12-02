@@ -28,7 +28,7 @@ export default function TimelineCredits() {
           rel="noopener noreferrer"
           className="font-medium text-mainLinks hover:text-mainLinks/80 hover:underline transition-all"
         >
-          JAE
+          Luigistics
         </a>
       </p>
       <p className="mt-1.5 flex flex-wrap items-center justify-center gap-2">
