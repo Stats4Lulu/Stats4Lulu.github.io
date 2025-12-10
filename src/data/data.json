@@ -710,7 +710,7 @@
         {
           "type":"image",
           "title":"February Court Photo",
-          "url":"february_court_photo_1.jpg"
+          "url":"february_court_photo.jpg"
         },
         {
           "type":"image",
@@ -2149,6 +2149,94 @@
       "title":"Defense Response to Continued Local Rule 23.1 Violations",
       "subtitle":"Mangione's defense seeks dismissal of the federal indictment as they claim he is being unfairly maligned and slandered by government officials and is not able to get a fair trial",
       "content":"Mangione's defense team comments further on the prejudicial statements and identifies exactly how they have harmed their client. They point to the political coordination between the White House and the Department of Justice and also question the influence of UnitedHealth on the case, asking for discovery of possible collusion to prejudice Mangione.  As a result, they seek to dismiss the federal case.",
+      "media":[
+
+      ]
+    }
+  },
+  {
+    "id":96,
+    "date":"2025-11-12",
+    "category":"Legal Filings",
+    "jurisdiction":"NY",
+    "status":"PUBLISH",
+    "links":[
+      {
+        "title":"Sanity Docs",
+        "link":"https:\/\/cdn.sanity.io\/files\/detu0qji\/production\/904dde2fce313a5fa0f206960bdf3ef71d7cbb61.pdf"
+      }
+    ],
+    "events":{
+      "title":"Defense files a Reply Affirmation",
+      "subtitle":"Mangione's defense argues that the Certificate of Compliance is invalid since the prosecution did not give all of the required discovery materials",
+      "content":"Mangione's defense team challenges the Certificate of Compliance the prosecution filed on September 16, 2025 because two of the files provided were unreadable. The prosecution admitted to the processing error and resent the files. Additionally, the prosecution did not provide the key documents in Mangione's missing person report filed in San Francisco, CA. Because of these reasons, the defense claims that the prosecution cannot claim they are in compliance since the discovery is still incomplete. They request that the judge declares the Certificate of Compliance invalid.",
+      "media":[
+
+      ]
+    }
+  },
+  {
+    "id":97,
+    "date":"2025-11-18",
+    "category":"Legal Filings",
+    "jurisdiction":"Federal",
+    "status":"PUBLISH",
+    "links":[
+      {
+        "title":"Sanity Docs",
+        "link":"https:\/\/cdn.sanity.io\/files\/detu0qji\/production\/f6806a78c646d5636637c3c9519303288c48fe5b.pdf"
+      },
+      {
+        "title":"Court Listener",
+        "link":"https:\/\/storage.courtlistener.com\/recap\/gov.uscourts.nysd.640793\/gov.uscourts.nysd.640793.67.1.pdf"
+      }
+    ],
+    "events":{
+      "title":"Defense files Motion to Compel Acceptance of Civilian Clothing for Hearings",
+      "subtitle":"Mangione's defense requests that Mangione can wear civilian clothes to his December suppression hearings",
+      "content":"Mangione's defense requests that Mangione be permitted to wear the following items during his scheduled December suppression hearings: 2 suits, 3 shirts, 3 sweaters, 3 pairs of pants, 5 pairs of socks, and 1 pair of shoes without laces. It is requested that he change into these clothes at MDC Brooklyn prior to arrival at the courthouse. Judge Garnett signs off on this the following day.",
+      "media":[
+
+      ]
+    }
+  },
+  {
+    "id":99,
+    "date":"2025-11-25",
+    "category":"Legal Filings",
+    "jurisdiction":"NY",
+    "status":"PUBLISH",
+    "links":[
+      {
+        "title":"Sanity Docs",
+        "link":"https:\/\/cdn.sanity.io\/files\/detu0qji\/production\/8801c8552a91d25485e6d270382d1e0537142499.pdf"
+      }
+    ],
+    "events":{
+      "title":"Defense files motion to preclude prejudicial evidence from being introduced during the suppression hearings",
+      "subtitle":"Mangione's defense asks Judge Carro to resolve several issues prior to the Mapp and Huntley hearings on December 1, 2025",
+      "content":"Mangione's defence requests that the contents of Mangione's notebook and other private writings are not brought up during the suppression hearings. Additionally, they request that there is limited witness testimony about those items. The defense asks that the prosecution shares which exhibits they will use and redact personal information. They request that Mangione is unshackled during these hearings, as to prevent unfair prejudice and media exposure. Lastly, the defense wishes to arrange two wittnesses for the upcoming hearings.",
+      "media":[
+
+      ]
+    }
+  },
+  {
+    "id":100,
+    "date":"2025-11-25",
+    "category":"Legal Filings",
+    "jurisdiction":"PA",
+    "status":"PUBLISH",
+    "links":[
+      {
+        "title":"Pennsylvania Courts",
+        "link":"https:\/\/www.pacourts.us\/Storage\/media\/pdfs\/20251203\/181425-20251203131818322.pdf"
+      }
+    ],
+    "events":{
+      "title":"Prosecution files Notice of Defendant's Unavailability for Personal Appearance in the Blair County Court of Common Pleas and Praecipe for Consent to Remote Appearance",
+      "subtitle":"The prosecution is notifying the court that Mangione is still unavailable to appear in Blair County court",
+      "content":"PA prosecution requests that Mangione participates in his PA court hearings remotely since he is unable to do so in person.",
       "media":[
 
       ]
