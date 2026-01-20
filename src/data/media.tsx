@@ -657,7 +657,7 @@ export const GetInvolved = () => (
     </p>
 
     <p>
-      Website:&nbsp;
+      Discord:&nbsp;
       <a
         href="https://discord.gg/hDuuFCtWbk"
         target="_blank"
@@ -667,7 +667,7 @@ export const GetInvolved = () => (
       </a>
     </p>
     <p>
-      Discord:&nbsp;
+      Website:&nbsp;
       <a
         href="https://stats4lulu.github.io"
         target="_blank"
