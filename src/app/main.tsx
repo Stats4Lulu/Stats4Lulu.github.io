@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { HelmetProvider } from "react-helmet-async";  // Import HelmetProvider
 import App from "./App.tsx";
 import HomePage from "./HomePage.tsx";
+import Media from "./Media.tsx";
 
 function RedirectHandler() {
   const navigate = useNavigate();
@@ -29,6 +30,7 @@ createRoot(document.getElementById("root")!).render(
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/timeline" element={<App />} />
+          <Route path="/media" element={<Media />} />
         </Routes>
       </Router>
     </HelmetProvider>

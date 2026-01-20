@@ -111,7 +111,8 @@
   --color-lookerStudioBackground: #f5f5f5;
   --color-statementBackground: #eeeeee;
   --color-scrollButton: #395752;
-  --color-cookiePopup: #4F736F;
+  --color-homePageCookiePopup: #4F736F;
+  --color-mediaCookiePopup: #485963;
 }
 
 .dark {

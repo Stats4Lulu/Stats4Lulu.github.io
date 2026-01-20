@@ -179,7 +179,7 @@ export default function HomePage() {
         </div>
       </div>
       <CookieBanner 
-        bgColor={"bg-cookiePopup"}
+        bgColor={"bg-homePageCookiePopup"}
       />
     </div>
   );
