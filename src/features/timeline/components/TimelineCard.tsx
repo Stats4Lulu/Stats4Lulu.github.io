@@ -1,6 +1,9 @@
 import { useMemo, useRef } from 'react'
 import { Element } from 'react-scroll'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 import PhotoCarousel from '../../media/components/PhotoCarousel'
+import { WitnessList } from './WitnessCard'
 import type { CardProps } from '@timeline/types'
 import { sizeClasses } from './sizeClasses'
 
@@ -88,8 +91,8 @@ export default function TimelineCard({
                     {label === item.category
                       ? 'Event Category'
                       : label === item.jurisdiction
-                      ? 'Jurisdiction'
-                      : label}
+                        ? 'Jurisdiction'
+                        : label}
                   </div>
                 </div>
               ))}
@@ -97,12 +100,12 @@ export default function TimelineCard({
         </div>
 
         <h3 className={`text-title dark:text-title-dark ${s.title}`}>
-          {item.events.title}
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>{item.events.title}</ReactMarkdown>
         </h3>
 
         {item.events.subtitle && (
           <p className={`text-subtitle dark:text-subtitle-dark ${s.subtitle}`}>
-            {item.events.subtitle}
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{item.events.subtitle}</ReactMarkdown>
           </p>
         )}
 
@@ -118,11 +121,10 @@ export default function TimelineCard({
 
         <div>
           <div
-            className={`${s.content} ${
-              needsReadMore && !expanded ? 'line-clamp-3' : ''
-            }`}
+            className={`${s.content} ${needsReadMore && !expanded ? 'line-clamp-3' : ''
+              }`}
           >
-            {item.events.content}
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{item.events.content}</ReactMarkdown>
           </div>
 
           {needsReadMore && (
@@ -137,6 +139,10 @@ export default function TimelineCard({
             </button>
           )}
         </div>
+
+        {item.events.witnesses && item.events.witnesses.length > 0 && (
+          <WitnessList witnesses={item.events.witnesses} textSizeClass={s.content} />
+        )}
 
         {item.links?.length > 0 && (
           <div className="mt-3">

@@ -1,8 +1,11 @@
+export type MediaType = 'image' | 'video' | 'youtube' | 'twitter'
+
 export type MediaItem = {
-  type: 'image' | 'video'
+  type: MediaType
   title: string
-  url?: string //redundant
+  url?: string
   link?: string
+  sensitive?: boolean
 }
 
 export type SizeClasses = {
@@ -24,7 +27,7 @@ export interface NavProps {
   onPrev: () => void
   onNext: () => void
   onDotClick: (i: number) => void
-  mediaTypes?: ('image' | 'video')[]
+  mediaTypes?: MediaType[]
 }
 
 export interface BoxProps {

@@ -1,6 +1,14 @@
 import type { MediaItem } from '@media/types'
 import type { DateFormat } from '@sidebar/types'
 
+export type Witness = {
+  name: string
+  title?: string
+  connection: string
+  testimony: string
+  crossExamination?: string
+}
+
 export type TimelineItem = {
   id: number
   date: string
@@ -18,6 +26,7 @@ export type TimelineItem = {
     subtitle: string
     content: string
     media: MediaItem[]
+    witnesses?: Witness[]
   }
 }
 

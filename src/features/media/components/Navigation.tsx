@@ -14,7 +14,8 @@ export default function Navigation({
   mediaTypes = [],
 }: NavProps) {
   const mediaType = mediaTypes[currentIndex]
-  const Icon = mediaType === 'video' ? Play : Camera
+  const isVideo = mediaType && mediaType !== 'image'
+  const Icon = isVideo ? Play : Camera
 
   return (
     <>
@@ -40,17 +41,17 @@ export default function Navigation({
 
      <div className="nav-dots absolute bottom-2 left-1/2 flex -translate-x-1/2 gap-1.5 opacity-0 transition group-hover:opacity-100">
         {Array.from({ length: total }).map((_, i) => {
-          const isVideo = mediaTypes[i] === 'video'
+          const isVideoType = mediaTypes[i] && mediaTypes[i] !== 'image'
           return (
             <button
               key={i}
               onClick={() => onDotClick(i)}
-              aria-label={`Go to ${isVideo ? 'video' : 'image'} ${i + 1}`}
+              aria-label={`Go to ${isVideoType ? 'video' : 'image'} ${i + 1}`}
               className={`h-2 w-2 rounded-full transition ${
                 i === currentIndex
                   ? 'bg-photoIndexBottomActive dark:bg-photoIndexBottomActive-dark scale-125'
                   : 'bg-photoIndexBottomNonActive hover:bg-photoIndexBottomNonActive'
-              } ${isVideo ? 'rounded-sm' : ''}`}
+              } ${isVideoType ? 'rounded-sm' : ''}`}
             />
           )
         })}
