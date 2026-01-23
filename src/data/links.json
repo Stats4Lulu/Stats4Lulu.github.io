@@ -1,148 +1,147 @@
 [
-    {
-      "buttonColor": "var(--color-firstCard)",
-      "sections": [
-        {
-          "name": "Projects",
-          "links": [
-            [
-              "Stats4Lulu Dashboard",
-              "https://lookerstudio.google.com/reporting/f8ea035e-9a51-498e-b77c-ec1b971eada0/page/p_6tpp4q8xrd?s=smgrVIDQwas"
-            ],
-            [
-              "Stats4Lulu Dashboard [Translated]",
-              "https://lookerstudio.google.com/reporting/d603a7eb-4bb9-4231-973f-05b71e24d3a2/page/p_unct2t61td?s=qXhVAmCmFZM"
-            ],
-            [
-                "Stats4Lulu Media Summaries",
-                "https://stats4lulu.github.io/media"
-            ],
-            [
-              "Datasets",
-              "https://www.kaggle.com/stats4lulu/datasets"
-            ],
-            [
-              "Stats4Lulu Postcard",
-              "https://drive.google.com/drive/folders/1MaL0i87axR6M8W8i9NtqZzj7I0pM3CNi"
-            ],
-            [
-              "Record of All Letters Received by Luigi",
-              "https://public.flourish.studio/visualisation/23763473/"
-            ],
-            [
-              "Bar Chart of Letters Received by Week",
-              "https://public.flourish.studio/visualisation/22838627/"
-            ]
+  {
+    "buttonColor": "var(--color-firstCard)",
+    "sections": [
+      {
+        "name": "Projects",
+        "links": [
+          [
+            "Stats4Lulu Dashboard",
+            "https://lookerstudio.google.com/reporting/f8ea035e-9a51-498e-b77c-ec1b971eada0/page/p_6tpp4q8xrd?s=smgrVIDQwas"
+          ],
+          [
+            "Stats4Lulu Dashboard [Translated]",
+            "https://lookerstudio.google.com/reporting/d603a7eb-4bb9-4231-973f-05b71e24d3a2/page/p_unct2t61td?s=qXhVAmCmFZM"
+          ],
+          [
+            "Datasets",
+            "https://www.kaggle.com/stats4lulu/datasets"
+          ],
+          [
+            "Stats4Lulu Postcard",
+            "https://drive.google.com/drive/folders/1MaL0i87axR6M8W8i9NtqZzj7I0pM3CNi"
+          ],
+          [
+            "Record of All Letters Received by Luigi",
+            "https://public.flourish.studio/visualisation/23763473/"
+          ],
+          [
+            "Bar Chart of Letters Received by Week",
+            "https://public.flourish.studio/visualisation/22838627/"
           ]
-        },
-        {
-          "name": "Socials",
-          "links": [
-            ["Instagram", "https://www.instagram.com/stats4lulu/"],
-            ["X", "https://x.com/stats4lulu"],
-            ["Tumblr", "https://www.tumblr.com/stats4lulu"],
-            ["Reddit", "https://www.reddit.com/user/stats4lulu/"],
-            ["GitHub", "https://github.com/Stats4Lulu/"]
+        ]
+      },
+      {
+        "name": "Socials",
+        "links": [
+          [
+            "Instagram",
+            "https://www.instagram.com/stats4lulu/"
+          ],
+          [
+            "X",
+            "https://x.com/stats4lulu"
+          ],
+          [
+            "Tumblr",
+            "https://www.tumblr.com/stats4lulu"
+          ],
+          [
+            "Reddit",
+            "https://www.reddit.com/user/stats4lulu/"
+          ],
+          [
+            "GitHub",
+            "https://github.com/Stats4Lulu/"
           ]
-        }
-      ]
-    },
-    {
-      "buttonColor": "var(--color-secondCard)",
-      "sections": [
-        {
-          "name": "Collabs",
-          "links": [
-            [
-              "Luigi Mangione Event Timeline with Luigistics",
-              "https://stats4lulu.github.io/timeline"
-            ],
-            [
-              "Postcards with Posters for Mangione",
-              "https://linktr.ee/postersformangione"
-            ],
-            [
-              "Donation Guide with The Luigi Case Files",
-              "https://www.instagram.com/p/DLxLB_-RMUl/"
-            ],
-            [
-              "Multilingual Printables with Mavericks with Mangione",
-              "https://www.instagram.com/p/DM3u3ijsoM0/"
-            ]
+        ]
+      }
+    ]
+  },
+  {
+    "buttonColor": "var(--color-secondCard)",
+    "sections": [
+      {
+        "name": "Collabs",
+        "links": [
+          [
+            "Luigi Mangione Event Timeline with Luigistics",
+            "https://stats4lulu.github.io/timeline"
+          ],
+          [
+            "Postcards with Posters for Mangione",
+            "https://linktr.ee/postersformangione"
+          ],
+          [
+            "Donation Guide with The Luigi Case Files",
+            "https://www.instagram.com/p/DLxLB_-RMUl/"
+          ],
+          [
+            "Multilingual Printables with Mavericks with Mangione",
+            "https://www.instagram.com/p/DM3u3ijsoM0/"
           ]
-        },
-        {
-          "name": "Media & Mentions",
-          "links": [
-            [
-              "NY Defense Motion [cited on p.5]",
-              "https://cdn.sanity.io/files/detu0qji/production/667882212ac2c73a724fadcda417e50352de6303.pdf"
-            ],
-            [
-              "Party Girls Podcast [cited on 9 May 2025]",
-              "https://fans.fm/p/pKDdApX"
-            ],
-            [
-              "Luigi Mangione Legal Defense Fund Description",
-              "https://www.givesendgo.com/luigi-defense-fund"
-            ],
-            [
-              "Rolling Stone",
-              "https://archive.ph/X3fIK"
-            ]
+        ]
+      },
+      {
+        "name": "Media & Mentions",
+        "links": [
+          [
+            "Stats4Lulu Media Summaries",
+            "https://stats4lulu.github.io/media"
           ]
-        }
-      ]
-    },
-    {
-      "buttonColor": "var(--color-thirdCard)",
-      "sections": [
-        {
-          "name": "Official Links",
-          "links": [
-            [
-              "Luigi Mangione Official Website",
-              "https://www.luigimangioneinfo.com/"
-            ],
-            [
-              "Donate to Luigi Mangione",
-              "https://www.givesendgo.com/luigi-defense-fund"
-            ],
-            [
-              "Write to Luigi Mangione",
-              "https://www.luigimangioneinfo.com/pages/faq/"
-            ]
+        ]
+      }
+    ]
+  },
+  {
+    "buttonColor": "var(--color-thirdCard)",
+    "sections": [
+      {
+        "name": "Official Links",
+        "links": [
+          [
+            "Luigi Mangione Official Website",
+            "https://www.luigimangioneinfo.com/"
+          ],
+          [
+            "Donate to Luigi Mangione",
+            "https://www.givesendgo.com/luigi-defense-fund"
+          ],
+          [
+            "Write to Luigi Mangione",
+            "https://www.luigimangioneinfo.com/pages/faq/"
           ]
-        },
-        {
-          "name": "Community Links",
-          "links": [
-            [
-              "Party Girls Podcast",
-              "https://fans.fm/partygirls"
-            ],
-            [
-              "POPNYC",
-              "https://popnyc.org/"
-            ],
-            [
-              "The Luigi Case Files",
-              "https://www.luigicase.com"
-            ],
-            [
-              "The Plot Newspaper",
-              "https://linktr.ee/theplotnews"
-            ],
-            [
-              "Luigi Case Collection",
-              "https://luigicasecollection.wordpress.com/"
-            ],
-            [
-              "Luigi's Legal Fund Bookshop",
-              "https://luigisbooks.com/"
-            ]
+        ]
+      },
+      {
+        "name": "Community Links",
+        "links": [
+          [
+            "Party Girls Podcast",
+            "https://fans.fm/partygirls"
+          ],
+          [
+            "POPNYC",
+            "https://popnyc.org/"
+          ],
+          [
+            "The Luigi Case Files",
+            "https://www.luigicase.com"
+          ],
+          [
+            "The Plot Newspaper",
+            "https://linktr.ee/theplotnews"
+          ],
+          [
+            "Luigi Case Collection",
+            "https://luigicasecollection.wordpress.com/"
+          ],
+          [
+            "Luigi's Legal Fund Bookshop",
+            "https://luigisbooks.com/"
           ]
-        }
-      ]
-    }
-  ]
+        ]
+      }
+    ]
+  }
+]
