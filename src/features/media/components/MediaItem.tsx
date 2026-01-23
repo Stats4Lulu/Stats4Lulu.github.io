@@ -1,5 +1,5 @@
 import YouTube from 'react-youtube'
-import { TwitterTweetEmbed } from 'react-twitter-embed'
+import { Tweet } from 'react-tweet'
 import type { MediaItem, SizeClasses } from '../types'
 import { ZoomIn } from 'lucide-react'
 import ContentWarning from './ContentWarning'
@@ -11,25 +11,11 @@ interface Props {
   sizeClasses: SizeClasses
 }
 
-const getYouTubeID = (url: string) => {
-  try {
-    const u = new URL(url)
-    return u.hostname === 'youtu.be'
-      ? u.pathname.slice(1)
-      : u.searchParams.get('v')
-  } catch {
-    return null
-  }
-}
+const getYouTubeID = (url: string) =>
+  url.match(/(?:youtu\.be\/|youtube\.com\/watch\?v=)([\w-]+)/)?.[1] || null
 
-const getTwitterID = (url: string) => {
-  try {
-    const match = url.match(/(?:twitter\.com|x\.com)\/\w+\/status\/(\d+)/)
-    return match?.[1] || null
-  } catch {
-    return null
-  }
-}
+const getTwitterID = (url: string) =>
+  url.match(/(?:twitter\.com|x\.com)\/\w+\/status\/(\d+)/)?.[1] || null
 
 const YOUTUBE_OPTS = { playerVars: { modestbranding: 1, rel: 0 } }
 
@@ -85,17 +71,8 @@ export default function MediaItemRenderer({
     if (!tweetId) return null
 
     return wrap(
-      <div className="w-full max-w-[550px] mx-auto overflow-hidden rounded-lg flex flex-col items-center justify-center">
-        <div className="w-full flex justify-center">
-          <TwitterTweetEmbed
-            tweetId={tweetId}
-            options={{
-              theme: isDark ? 'dark' : 'light',
-              align: 'center',
-              conversation: 'none'
-            }}
-          />
-        </div>
+      <div className="w-full max-w-xl mx-auto overflow-hidden rounded-lg flex flex-col items-center justify-center" data-theme={isDark ? 'dark' : 'light'}>
+        <Tweet id={tweetId} />
       </div>
     )
   }
