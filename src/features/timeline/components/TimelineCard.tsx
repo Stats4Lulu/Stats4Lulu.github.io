@@ -2,6 +2,7 @@ import { useMemo, useRef } from 'react'
 import { Element } from 'react-scroll'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import remarkBreaks from 'remark-breaks'
 import PhotoCarousel from '../../media/components/PhotoCarousel'
 import { WitnessList } from './WitnessCard'
 import type { CardProps } from '@timeline/types'
@@ -100,12 +101,12 @@ export default function TimelineCard({
         </div>
 
         <h3 className={`text-title dark:text-title-dark ${s.title}`}>
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>{item.events.title}</ReactMarkdown>
+          <ReactMarkdown remarkPlugins={[remarkGfm, remarkBreaks]}>{item.events.title}</ReactMarkdown>
         </h3>
 
         {item.events.subtitle && (
           <p className={`text-subtitle dark:text-subtitle-dark ${s.subtitle}`}>
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>{item.events.subtitle}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[remarkGfm, remarkBreaks]}>{item.events.subtitle}</ReactMarkdown>
           </p>
         )}
 
@@ -124,7 +125,14 @@ export default function TimelineCard({
             className={`${s.content} ${needsReadMore && !expanded ? 'line-clamp-3' : ''
               }`}
           >
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>{item.events.content}</ReactMarkdown>
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm, remarkBreaks]}
+              components={{
+                p: ({ node, ...props }) => <p className="mb-4 last:mb-0" {...props} />,
+              }}
+            >
+              {item.events.content}
+            </ReactMarkdown>
           </div>
 
           {needsReadMore && (
