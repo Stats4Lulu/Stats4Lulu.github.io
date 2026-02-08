@@ -1,4 +1,4 @@
-import { Tag, MapPin } from 'lucide-react'
+import { Tag, MapPin, BookOpen, BookOpenCheck } from 'lucide-react'
 
 import SidebarWrapper from './SidebarWrapper'
 import ThemeToggle from './ThemeToggle'
@@ -19,6 +19,8 @@ export default function Sidebar({
   filters,
   items,
   sort,
+  readMore,
+  filteredItemCount = 0,
 }: SidebarProps) {
   const { query, set: setSearchQuery } = search
   const { mode, setMode, sizeMode, setSizeMode } = layout
@@ -82,9 +84,34 @@ export default function Sidebar({
         onSizeModeChange={setSizeMode}
       />
 
+      {readMore && (
+        <div className="mt-4">
+          <button
+            onClick={() => readMore.toggleAll(filteredItemCount)}
+            className={`flex w-full items-center justify-center gap-3 rounded-lg p-3 text-sm font-medium transition-colors ${readMore.allExpanded
+              ? 'bg-sbActive dark:bg-sbActive-dark text-sbActiveText dark:text-sbActiveText-dark'
+              : 'bg-sbPassive text-sbPassiveText hover:bg-sbPassive/80 dark:bg-sbPassive-dark dark:text-sbPassiveText-dark dark:hover:bg-sbPassive-dark/80'
+              }`}
+          >
+            {readMore.allExpanded ? (
+              <>
+                <BookOpenCheck size={16} />
+                Collapse All
+              </>
+            ) : (
+              <>
+                <BookOpen size={16} />
+                Expand All
+              </>
+            )}
+          </button>
+        </div>
+      )}
+
       <div className="mt-4">
         <ClearFiltersButton onClear={clearAllFilters} />
       </div>
     </SidebarWrapper>
   )
 }
+

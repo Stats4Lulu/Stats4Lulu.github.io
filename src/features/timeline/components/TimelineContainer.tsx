@@ -9,6 +9,7 @@ export default function TimelineContainer({
   sizeMode,
   searchQuery,
   dateFormat,
+  readMore,
 }: ContainerProps) {
   return (
     <>
@@ -21,7 +22,9 @@ export default function TimelineContainer({
         searchQuery={searchQuery}
         formatDate={(d) => formatDate(d)}
         enableReadMore={true}
+        readMore={readMore}
       />
     </>
   )
 }
+

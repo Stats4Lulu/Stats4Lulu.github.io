@@ -3911,6 +3911,11 @@
         "title": "LA Magazine",
         "link": "https:\/\/lamag.com\/crimeinla\/judge-sets-september-8-2026-jury-selection-in-luigi-mangione-federal-murder-case\/",
         "sensitive": false
+      },
+      {
+        "title": "u\/missidcullen Docs",
+        "link": "https:\/\/drive.google.com\/file\/d\/1eI4Fr9t7zlpsGTjPZQ_8owyLU_kdS-S7\/view",
+        "sensitive": false
       }
     ],
     "events": {
@@ -3922,6 +3927,18 @@
           "type": "image",
           "title": "Sketch 1",
           "url": "23_01_2026_sketch_1.jpg",
+          "sensitive": false
+        },
+        {
+          "type": "image",
+          "title": "Sketch 2",
+          "url": "23_01_2026_sketch_2.jpg",
+          "sensitive": false
+        },
+        {
+          "type": "image",
+          "title": "Sketch 3",
+          "url": "23_01_2026_sketch_3.jpg",
           "sensitive": false
         },
         {
@@ -4020,6 +4037,255 @@
           "title": "@Uebey (Twitter\/X)",
           "link": "https:\/\/x.com\/Uebey\/status\/2016584686986768762",
           "type": "twitter",
+          "sensitive": false
+        }
+      ]
+    }
+  },
+  {
+    "id": 137,
+    "date": "2026-01-29",
+    "category": "Legal Filings",
+    "jurisdiction": "Federal",
+    "status": "PUBLISH",
+    "links": [
+      {
+        "title": "Court Listener",
+        "link": "https:\/\/storage.courtlistener.com\/recap\/gov.uscourts.nysd.640793\/gov.uscourts.nysd.640793.101.0.pdf",
+        "sensitive": false
+      }
+    ],
+    "events": {
+      "title": "Government Files Letter",
+      "subtitle": "Joint proposal of federal jury selection schedule",
+      "content": "The federal prosecution files a letter to Judge Margaret Garnett jointly with the defense outlining a proposed schedule for the submission, briefing, and administration of juror questionnaires ahead of the federal trial.",
+      "media": []
+    }
+  },
+  {
+    "id": 138,
+    "date": "2026-01-30",
+    "category": "Legal Filings",
+    "jurisdiction": "Federal",
+    "status": "PUBLISH",
+    "links": [
+      {
+        "title": "Court Listener",
+        "link": "https:\/\/storage.courtlistener.com\/recap\/gov.uscourts.nysd.640793\/gov.uscourts.nysd.640793.102.0.pdf",
+        "sensitive": false
+      }
+    ],
+    "events": {
+      "title": "Judge Garnett Files Opinion and Order",
+      "subtitle": "Fesderal backpack suppression is denied",
+      "content": "In an Opinion and Order filing, Judge Garnett denies the defense's motions to suppress Mangione's backpack. She rules that even if the initial search of Mangione's belongings had flaws, the evidence would have been discovered through lawful means eventually because the backpack would inevitibly be taken into police custody after arrest and inventoried per standard procedure. Additionally, federal investigators obtained a search warrant supported by probable cause, fully independent of the prior searches. Because that warrant was lawful, Mangione's backpack will be admissible to use in federal court.\n\nAlong with this filing are the following exhibits: The SDNY's warrant application 12\/16\/2024, an Agent Affadavit in Support of Application for Search and Seizure Warrant 12\/16\/24, and the SDNY's warrant 12\/16\/2024",
+      "media": []
+    }
+  },
+  {
+    "id": 139,
+    "date": "2026-01-30",
+    "category": "Legal Filings",
+    "jurisdiction": "Federal",
+    "status": "PUBLISH",
+    "links": [
+      {
+        "title": "Court Listener",
+        "link": "https:\/\/storage.courtlistener.com\/recap\/gov.uscourts.nysd.640793\/gov.uscourts.nysd.640793.103.0.pdf",
+        "sensitive": false
+      }
+    ],
+    "events": {
+      "title": "Judge Garnett Files Opinion and Order",
+      "subtitle": "Counts 3 and 4 are dismissed and death penalty is dropped",
+      "content": "In an Opinion and Order filing, Judge Garnett grants the defendant's motions to dismiss counts three and four of the indictment, removing death penalty eligibility for Mangione. This reduces the federal case to two staking charges, holding maximum punishment of life without parole. Charges 3 and 4 (murder with a firearm and a firearms offence) are dismissed because of the technicality that they must be commited during a federal crime. Judge Garnett agrees with the defense's motions regarding this matter that stalking is not clearly established as a \"crime of violence\" under Second Circuit law.\n\n\n\n\n\n\n\n\n\n\n\n",
+      "media": []
+    }
+  },
+  {
+    "id": 140,
+    "date": "2026-01-30",
+    "category": "Court",
+    "jurisdiction": "Federal",
+    "status": "PUBLISH",
+    "links": [
+      {
+        "title": "Rolling Stone",
+        "link": "https:\/\/www.rollingstone.com\/culture\/culture-news\/luigi-mangione-death-penalty-dropped-1235507484\/",
+        "sensitive": false
+      }
+    ],
+    "events": {
+      "title": "Federal Court Hearing",
+      "subtitle": "Mangione appears in federal court for hearing day 3",
+      "content": "Mangione appears with his team to federal court, notably without public defenders Moskowitz, Schulman, and Neff. \n\nJudge Garnett requests that if the government wishes to appeal her decision regarding dropping the death penalty, they may do so no later than February 27, 2026. Both sides are pushing tor a long jury selection process due to the public interest in Mangione's case, however, Judge Garnett says that is not realistic or necessary, citing that the court is no stranger to high profile cases like Sean \"Diddy\" Combs and Ghislaine Maxwell. Since Moskowitz was appointed to the defense because of the death penalty, Judge Garnett wishes to speak with him privately to discuss his role moving forward in the case. The prosecution does not object to this. Additionally, the prosecution moves to exclude the Speedy Trial Act to October 8th with no objection from the defense. The next hearing is set for August.\n\nOutside, Karen Friedman Agnifilo speaks with the press, saying they are all relieved at the news that the death penalty is no longer on the table. She says they are ready to tackle the rest of the charges.",
+      "media": [
+        {
+          "title": "YouTube",
+          "link": "https:\/\/www.youtube.com\/watch?v=VtbhLe4G9sY",
+          "type": "youtube",
+          "sensitive": false
+        },
+        {
+          "type": "image",
+          "title": "Sketch",
+          "url": "30_01_2026_sketch.jpg",
+          "sensitive": false
+        }
+      ]
+    }
+  },
+  {
+    "id": 141,
+    "date": "2026-01-30",
+    "category": "Legal Filings",
+    "jurisdiction": "NY",
+    "status": "PUBLISH",
+    "links": [
+      {
+        "title": "Sanity Docs",
+        "link": "https:\/\/cdn.sanity.io\/files\/detu0qji\/production\/7edaa3eee3f7ea922229838810749b603bc19eb5.pdf",
+        "sensitive": false
+      }
+    ],
+    "events": {
+      "title": "Defense Files Post Hearing Memorandum of Law in Support of Motions to Suppress",
+      "subtitle": "Defense argues for suppression of Mangione's belongings and statements in the NY case",
+      "content": "In summary of the December suppression hearings, Mangione's defense argues that both the contents of Mangione's backpack and the statements he made to law enforcement must be suppressed because they were obtained in violation of his constitutional rights. With the backpack, they firmly believe that every search of Mangione's belongings was unconstitutional because law enforcement failed to obtain a warrant and none of the warrant exceptions apply to this scenario. They maintain that this was not a valid search incident to arrest, that the bomb search justification was pretextual, and that the search at the precinct went against Altoona Police Department standards for taking inventory. Police officers also read Mangione's personal writings without a warrant, which is prohibited. For Mangione's statements, it is noted that he was repeatedly interrogated prior to being read his Miranda warnings. Once he invoked his right to remain silent, officers continued to question him. For the statements made to corrections officers at SCI Huntingdon, despite knowing that Mangione had council, they still engaged in conversation that could elicit incriminating statements. Questioning after someone retains council is strictly prohibited, thus any statements made should be suppressed automatically.\n",
+      "media": [
+        {
+          "type": "image",
+          "title": "Arrest 1",
+          "url": "30_01_2026_arrest_1.jpg",
+          "sensitive": false
+        },
+        {
+          "type": "image",
+          "title": "Arrest 2",
+          "url": "30_01_2026_arrest_2.jpg",
+          "sensitive": false
+        }
+      ]
+    }
+  },
+  {
+    "id": 142,
+    "date": "2026-01-30",
+    "category": "Legal Filings",
+    "jurisdiction": "PA",
+    "status": "PUBLISH",
+    "links": [
+      {
+        "title": "Pennsylvania Courts",
+        "link": "https:\/\/ujsportal.pacourts.us\/Report\/CpDocketSheet?docketNumber=CP-07-CR-0002724-2024&dnh=ro2maYdgm4rOkio78TYsHw%3D%3D",
+        "sensitive": false
+      }
+    ],
+    "events": {
+      "title": "PA Notice: Mangione Unavailable for Hearing",
+      "subtitle": "PA files a Notice of Defendant's Unavailability for Personal Appearance",
+      "content": "Mangione is still unable to make a personal appearance in court for his Pennsylvania State charges.",
+      "media": []
+    }
+  },
+  {
+    "id": 143,
+    "date": "2026-02-02",
+    "category": "Legal Filings",
+    "jurisdiction": "Federal",
+    "status": "PUBLISH",
+    "links": [
+      {
+        "title": "Sanity Docs (Motion for Discovery 07\/25\/25)",
+        "link": "https:\/\/cdn.sanity.io\/files\/detu0qji\/production\/758e846bd39720d10207368ddf0c9f5d37161bb0.pdf",
+        "sensitive": false
+      },
+      {
+        "title": "Sanity Docs (Motion to Dismiss 09\/20\/25)",
+        "link": "https:\/\/cdn.sanity.io\/files\/detu0qji\/production\/f02bb279d694b6aa4c9e4871528d5f79decc28c7.pdf",
+        "sensitive": false
+      }
+    ],
+    "events": {
+      "title": "Judge Garnett Files Order",
+      "subtitle": "Judge denies 40 Motion for Discovery and 51 Motion to Dismiss as moot ",
+      "content": "Judge Garnett denies 40 Motion for Discovery and 51 Motion to Dismiss as moot because those filings primarily relate to Count Three, the capital-eligible charge, but that charge has been dropped. If there is a successful appeal by the prosecution to get Count Three back in the federal case, these documents can be renewed.",
+      "media": []
+    }
+  },
+  {
+    "id": 144,
+    "date": "2026-02-03",
+    "category": "Legal Filings",
+    "jurisdiction": "Federal",
+    "status": "PUBLISH",
+    "links": [
+      {
+        "title": "Court Listener",
+        "link": "https:\/\/storage.courtlistener.com\/recap\/gov.uscourts.nysd.640793\/gov.uscourts.nysd.640793.105.0.pdf",
+        "sensitive": false
+      }
+    ],
+    "events": {
+      "title": "Judge Garnett Files Scheduling Order",
+      "subtitle": "Judge sets schedule for federal trial",
+      "content": "Judge Garnett files a document outlining the federal case schedule, noting important dates for jury selection, pre-trial materials, motions, and appearances in court.",
+      "media": []
+    }
+  },
+  {
+    "id": 145,
+    "date": "2026-02-05",
+    "category": "Legal Filings",
+    "jurisdiction": "NY",
+    "status": "PUBLISH",
+    "links": [
+      {
+        "title": "Sanity Docs",
+        "link": "https:\/\/cdn.sanity.io\/files\/detu0qji\/production\/abea7e6ac4db779b9803af5f6722097ed2e63da9.pdf",
+        "sensitive": false
+      }
+    ],
+    "events": {
+      "title": "Defense Files Letter",
+      "subtitle": "Defense requests for denial of NY prosecution's proposed trial date",
+      "content": "In response to the prosecution's request for a July 1, 2026 NY state trial, the defense outlines the near impossibility of this happening. They include the schedule for the federal trial, as ordered by Judge Garnett, showing that there is no room in the timeline for the NY state trial to happen before then. Additionally, because the legal defense will be tied up with federal matters, they would be unable to effectively prepare for another trial happening prior to then, as this would violate Mangione's right to the effective assistance of counsel guaranteed under the Federal and New York State Constitutions. The prosecution pushing for such a rushed trial goes against legal precedent while also ignoring that jury selection is a multi month process in and of itself, all while additional investigation, motion practice, and legal preparation are required before trial can begin.",
+      "media": []
+    }
+  },
+  {
+    "id": 146,
+    "date": "2026-02-06",
+    "category": "Court",
+    "jurisdiction": "NY",
+    "status": "PUBLISH",
+    "links": [
+      {
+        "title": "LA Magazine",
+        "link": "https:\/\/lamag.com\/crimeinla\/its-double-jeopardy-luigi-mangione-breaks-silence-after-judge-sets-state-trial\/",
+        "sensitive": false
+      },
+      {
+        "title": "Reddit",
+        "link": "https:\/\/www.reddit.com\/r\/FreeLuigi\/comments\/1qxs3s9\/full_court_transcript_from_new_york_state_court\/",
+        "sensitive": false
+      }
+    ],
+    "events": {
+      "title": "NY State Court Hearing",
+      "subtitle": "Judge sets NY case to precede federal case",
+      "content": "At the beginning of this impromptu court hearing, sidebar between the prosecution and the defense was notably heated, per court reporters. The issue at hand is which jurisdiction will go to trial first: the federal case, which would be a preference for the defense especially now with Judge Garnett setting a firm trial date, or having the state case go first, which would be a preference for Judge Carro and the prosecution. Prosecutor Joel Seidemann insists that because the state of NY arrested Mangione first, then the NY trial should go first. Additionally, Judge Carro says that this state case is less complex now, thus he sets the NY trial date to June 8, 2026 (pending federal case appeals, in which it would be pushed back to September 8, 2026). Karen Friedman Agnifilo stated that because they are preparing for the October federal trial, they would not be ready for such an early state trial. Judge Carro does not back down, as his answer is firm.\n\nWhile being escorted out of court, Mangione states, \"It's the same trial twice. One plus one is two. Double jeopardy by any commonsense definition.\"\n\nAfter the hearing Karen Friedman Agnifilo briefly spoke with the press.",
+      "media": [
+        {
+          "title": "Twitter",
+          "link": "https:\/\/x.com\/conlin_lauren\/status\/2019826699383501201?s=20",
+          "type": "twitter",
+          "sensitive": false
+        },
+        {
+          "type": "image",
+          "title": "Sketch 1 ",
+          "url": "06_02_2026_sketch_1_.jpg",
           "sensitive": false
         }
       ]

@@ -44,6 +44,13 @@ export interface FilterProps {
   setSelectedJurisdictions: (next: JurisdictionFilter) => void
 }
 
+export interface ReadMoreProps {
+  expanded: Set<number>
+  toggle: (id: number) => void
+  toggleAll: (itemCount: number) => void
+  allExpanded: boolean
+}
+
 export interface SidebarProps {
   toggleTheme: () => void
   search: SearchProps
@@ -52,4 +59,6 @@ export interface SidebarProps {
   sort: SortProps
   filters: FilterProps
   items: Array<{ date: string }>
+  readMore?: ReadMoreProps
+  filteredItemCount?: number
 }

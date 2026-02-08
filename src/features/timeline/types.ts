@@ -42,6 +42,13 @@ export type CardLinks = {
   }>
 }
 
+export interface ReadMoreState {
+  expanded: Set<number>
+  toggle: (id: number) => void
+  toggleAll: (itemCount: number) => void
+  allExpanded: boolean
+}
+
 export interface Timelinerops {
   items: TimelineItem[]
   mode: Mode
@@ -52,6 +59,7 @@ export interface Timelinerops {
   enableReadMore?: boolean
   searchQuery?: string
   formatDate?: (date: string) => string
+  readMore?: ReadMoreState
 }
 
 export type CardProps = {
@@ -79,6 +87,7 @@ export interface ContainerProps {
   sizeMode: SizeMode
   searchQuery: string
   dateFormat: DateFormat
+  readMore?: ReadMoreState
 }
 
 export interface TimelineProps {

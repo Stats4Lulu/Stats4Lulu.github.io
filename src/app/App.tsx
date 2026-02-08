@@ -11,6 +11,7 @@ import EmptyState from "@shared/components/EmptyState"
 import Credits from "@shared/components/Credits"
 import ScrollToTopButton from "@/shared/components/ScrollButton"
 import { useTimelineFilters } from "@timeline/hooks/useTimelineFilters"
+import { useReadMore } from "@timeline/hooks/useReadMore"
 import rawItems from "../data/data.json"
 import MonthJump from "@/shared/components/MonthJump"
 
@@ -48,22 +49,31 @@ export default function App() {
     sort,
   } = useTimelineFilters(items)
 
+  const { expanded, toggle, toggleAll, allExpanded } = useReadMore()
+
+  const readMore = {
+    expanded,
+    toggle,
+    toggleAll,
+    allExpanded,
+  }
+
   return (
     <div className="bg-mainBackground text-mainText dark:bg-mainBackground-dark dark:text-mainText-dark min-h-screen transition-colors">
 
       <Helmet>
         <title>Luigi Mangione Event Timeline</title>
-        <meta name="description" content="Explore key moments and updates in Luigi Mangione's case - By Stats4Lulu & JAE"/>
+        <meta name="description" content="Explore key moments and updates in Luigi Mangione's case - By Stats4Lulu & JAE" />
         <meta name="author" content="Stats4Lulu & JAE" />
         <meta name="keywords" content="Luigi Mangione, Stats4Lulu, Luigistics, timeline, advocacy, events" />
 
         <meta property="og:title" content="Luigi Mangione Event Timeline" />
-        <meta property="og:description" content="Explore key moments and updates in Luigi Mangione's case - By Stats4Lulu & JAE"/>
+        <meta property="og:description" content="Explore key moments and updates in Luigi Mangione's case - By Stats4Lulu & JAE" />
         <meta property="og:url" content="https://stats4lulu.github.io/timeline" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:title" content="Luigi Mangione Event Timeline" />
-        <meta name="twitter:description" content="Explore key moments and updates in Luigi Mangione's case - By Stats4Lulu & JAE"/>
+        <meta name="twitter:description" content="Explore key moments and updates in Luigi Mangione's case - By Stats4Lulu & JAE" />
         <meta name="twitter:url" content="https://stats4lulu.github.io/timeline" />
       </Helmet>
 
@@ -75,6 +85,8 @@ export default function App() {
         filters={filters}
         items={items}
         sort={sort}
+        readMore={readMore}
+        filteredItemCount={filteredItems.length}
       />
 
       <main className="mx-auto max-w-3xl p-6">
@@ -119,6 +131,7 @@ export default function App() {
               sizeMode={layout.sizeMode}
               searchQuery={search.query}
               dateFormat={date.format}
+              readMore={readMore}
             />
             <div className="mt-8 text-center text-sm text-mainText dark:text-mainText-dark opacity-70">
               You've reached the end!
@@ -130,7 +143,7 @@ export default function App() {
       </main>
 
       <ScrollToTopButton />
-      <CookieBanner 
+      <CookieBanner
         bgColor={"bg-mainLinks"}
       />
     </div>

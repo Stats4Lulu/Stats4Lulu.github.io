@@ -1,5 +1,6 @@
 import { useMemo } from 'react'
 import { scroller } from 'react-scroll'
+import { Dices } from 'lucide-react'
 import type { TimelineItem } from '@timeline/types'
 import type { Mode } from '@sidebar/types'
 import { parseDate } from '@shared/utils/dateUtils'
@@ -71,6 +72,20 @@ export default function MonthJump({ items, mode }: Props) {
     scrollToCard(cardId, el)
   }
 
+  const handleRandomJump = () => {
+    if (items.length === 0) return
+
+    const randomIndex = Math.floor(Math.random() * items.length)
+    const target = items[randomIndex]
+
+    const cardId = `timeline-card-${target.id}`
+    const el = document.getElementById(cardId) as HTMLElement | null
+    if (!el) return
+
+    el.click()
+    scrollToCard(cardId, el)
+  }
+
   if (months.length === 0) return null
 
   const verticalAlign =
@@ -96,6 +111,16 @@ export default function MonthJump({ items, mode }: Props) {
           </option>
         ))}
       </select>
+
+      <button
+        onClick={handleRandomJump}
+        title="Jump to random event"
+        className="rounded-md bg-mainLinks text-white dark:bg-mainLinks-dark
+                   px-2 py-1 hover:opacity-80 transition-opacity
+                   focus:outline-none focus:ring-2 focus:ring-ringHover"
+      >
+        <Dices size={16} />
+      </button>
     </div>
   )
 }

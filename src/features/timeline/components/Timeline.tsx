@@ -14,9 +14,13 @@ export default function Timeline({
   enableReadMore = false,
   searchQuery = '',
   formatDate,
+  readMore: externalReadMore,
 }: Timelinerops) {
   const [activeIndex, setActiveIndex] = useState(initialActiveIndex)
-  const { expanded, toggle } = useReadMore()
+
+  //use external readmore, otherwise use local hook!! 
+  const localReadMore = useReadMore()
+  const { expanded, toggle } = externalReadMore ?? localReadMore
 
   const displayDate = useCallback(
     //reformats date
@@ -67,3 +71,4 @@ export default function Timeline({
     />
   )
 }
+
