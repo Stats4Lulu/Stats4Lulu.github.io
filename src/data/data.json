@@ -2565,7 +2565,7 @@
           "name": "Emily States",
           "title": "",
           "connection": "911 coordinator and dispatcher for the Blair County Department of Emergency Services",
-          "testimony": "Regarding the 911 call she received on December 9, 2024, the radio transmissions between dispatch and the officers, the call for service from the incident, and the CLEAN report from the information ran by arresting officers.",
+          "testimony": "Regaring the 911 call she received on December 9, 2024, the radio transmissions between dispatch and the officers, the call for service from the incident, and the CLEAN report from the information ran by arresting officers.",
           "crossExamination": "No further questions from the defense"
         },
         {
@@ -3007,7 +3007,7 @@
           "name": "Nicole Smith",
           "title": "",
           "connection": "Assistant District Attorney of Blair County",
-          "testimony": "Regarding Mangione's PA charges of tampering with records and forgery and confirming that there was no joint investigation with NY authorities on December 9, 2024.",
+          "testimony": "",
           "crossExamination": "No further questions from the defense"
         },
         {
@@ -4176,8 +4176,8 @@
     "status": "PUBLISH",
     "links": [
       {
-        "title": "Pennsylvania Courts",
-        "link": "https:\/\/ujsportal.pacourts.us\/Report\/CpDocketSheet?docketNumber=CP-07-CR-0002724-2024&dnh=ro2maYdgm4rOkio78TYsHw%3D%3D",
+        "title": "X (MangoRae)",
+        "link": "https:\/\/x.com\/babyyy_mango\/status\/2020952450413584426",
         "sensitive": false
       }
     ],
@@ -4185,7 +4185,14 @@
       "title": "PA Notice: Mangione Unavailable for Hearing",
       "subtitle": "PA files a Notice of Defendant's Unavailability for Personal Appearance",
       "content": "Mangione is still unable to make a personal appearance in court for his Pennsylvania State charges.",
-      "media": []
+      "media": [
+        {
+          "title": "X (MangoRae)",
+          "link": "https:\/\/x.com\/babyyy_mango\/status\/2020952450413584426",
+          "type": "twitter",
+          "sensitive": false
+        }
+      ]
     }
   },
   {
@@ -4289,6 +4296,122 @@
           "sensitive": false
         }
       ]
+    }
+  },
+  {
+    "id": 147,
+    "date": "2026-02-09",
+    "category": "Legal Filings",
+    "jurisdiction": "Federal",
+    "status": "PUBLISH",
+    "links": [
+      {
+        "title": "Court Listener",
+        "link": "https:\/\/storage.courtlistener.com\/recap\/gov.uscourts.nysd.640793\/gov.uscourts.nysd.640793.108.0.pdf",
+        "sensitive": false
+      },
+      {
+        "title": "Court Listener",
+        "link": "https:\/\/storage.courtlistener.com\/recap\/gov.uscourts.nysd.640793\/gov.uscourts.nysd.640793.108.1.pdf",
+        "sensitive": false
+      }
+    ],
+    "events": {
+      "title": "Defense Files Letter",
+      "subtitle": "Defense updates federal court on state court scheduling",
+      "content": "Mangione's defense files a letter to Judge Garnett updating her on scheduling conflicts between her set federal trial and Judge Carro's newly set state trial. They maintain that there has been a longtime understanding by both the federal and state court that the federal trial would occur in 2026. Despite all of this being discussed openly, the state prosecutors didn\u2019t raise any objections at the time. With the sudden and unexpected decision for the state trial to occur before the federal trial, the defense will now talk with the government and come back to the Judge Garnett soon to sort out how the state trial will affect the defense.",
+      "media": []
+    }
+  },
+  {
+    "id": 150,
+    "date": "2026-03-03",
+    "category": "Legal Filings",
+    "jurisdiction": "Federal",
+    "status": "PUBLISH",
+    "links": [],
+    "events": {
+      "title": "Judge Garnett Files Order",
+      "subtitle": "Judge Garnett asks the court to evaluate whether or not Moskowitz should remain on Mangione's defense",
+      "content": "Because the federal case is no longer a capital case, Judge Garnett asks the court to evaluate if Avraham Moskowitz should maintain his appointment to Mangione's council, as he was added solely for combatting the death penalty. Moskowitz is a public defender, so he must provide relevant information as to why he should remain on the defense, or he cannot remain as Mangione's council.",
+      "media": []
+    }
+  },
+  {
+    "id": 156,
+    "date": "2026-03-18",
+    "category": "Legal Filings",
+    "jurisdiction": "Federal",
+    "status": "PUBLISH",
+    "links": [],
+    "events": {
+      "title": "Defense Files Motion to Continue Trial Date",
+      "subtitle": "Mangione's defense argues that the trial schedule is unrealistic",
+      "content": "Mangione's defense tells federal judge Garnett that the current trial schedule, in combination with the New York state trial, is unfair and unworkable. Having two serious trials back to back would force Mangione and his legal team to handle both at the same time, causing practical problems, especially in regards to the juror questionnaire. They argue that this situation violates Mangione's right because he will not be able to fully participate in choosing a fair jury. Additionally, his legal team would not be able to effectively represent him. Lastly, the first trial, with guaranteed heavy media coverage, could bias jurors for the second trial, thus they request that the federal trial is delayed to January 2027.",
+      "media": []
+    }
+  },
+  {
+    "id": 157,
+    "date": "2026-03-21",
+    "category": "Legal Filings",
+    "jurisdiction": "Federal",
+    "status": "PUBLISH",
+    "links": [],
+    "events": {
+      "title": "Government Files Letter Response in Opposition of Motion to Continue Trial Date",
+      "subtitle": "Federal prosecution disagrees with delaying trial",
+      "content": "In response to KFA's motion, the prosecution in the federal case says they disagree with delaying the federal trial until January 2027. They believe that the problems the defense raised can be fixed through smaller adjustments such as changing the timing of the juror questionnaires. They note that the federal case is no longer as complicated as it was due to the death penalty eligible charge being dropped. Lastly, they suggest that keeping the timeline as-is serves the public's interest in resolving this case quickly.",
+      "media": []
+    }
+  },
+  {
+    "id": 158,
+    "date": "2026-03-23",
+    "category": "Legal Filings",
+    "jurisdiction": "Federal",
+    "status": "PUBLISH",
+    "links": [],
+    "events": {
+      "title": "Federal Judge Files Order for a Conference",
+      "subtitle": "A federal court hearing is scheduled",
+      "content": "Judge Garnett calls for an April 1, 2026 conference to settle issues brought up in regards to the defense's Motion to Continue Trial Date and the government's opposition.",
+      "media": []
+    }
+  },
+  {
+    "id": 159,
+    "date": "2026-04-01",
+    "category": "Court",
+    "jurisdiction": "Federal",
+    "status": "PUBLISH",
+    "links": [],
+    "events": {
+      "title": "Federal Court Hearing",
+      "subtitle": "Mangione appears in federal court",
+      "content": "In court, Judge Garnett begins by speaking privately (ex-parte) with Mangione's defense  about a sealed letter from March 23rd. Once they return to the courtroom, Garnett asks Mangione if he knowingly and voluntarily waived his right to be present for the conversation, to which he confirmed that he did. They then spoke about the state trial. KFA estimates that that trial will take six weeks. The prosecution pushes back, saying that the defense is juggling other high profile cases and using that as an excuse to delay Mangione's. Judge Garnett is reluctant to push back the trial to January 2027. She says that she would like the federal trial to begin on October 26th or November 2nd and that they will meet again on June 5th for another hearing.",
+      "media": [
+        {
+          "type": "image",
+          "title": "Sketch",
+          "url": "01_04_2026_sketch.jpg",
+          "sensitive": false
+        }
+      ]
+    }
+  },
+  {
+    "id": 160,
+    "date": "2026-04-01",
+    "category": "Legal Filings",
+    "jurisdiction": "NY",
+    "status": "PUBLISH",
+    "links": [],
+    "events": {
+      "title": "New York Judge Amends Trial Schedule",
+      "subtitle": "Newy York state trial is pushed back",
+      "content": "New York's Judge Carro pushed back the state trial from June 8, 2026 to September 8, 2026. They will still meet back in court on May 18, 2026 as previously scheduled.",
+      "media": []
     }
   }
 ]
