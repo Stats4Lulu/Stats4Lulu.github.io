@@ -707,6 +707,7 @@ export const MediaAndMentions = () => {
           "TMZ",
           "https://www.tmz.com/2025/09/04/luigi-mangione-shein-ad-from-chinese-fans/",
         ],
+        ["La Voce di New York", "https://lavocedinewyork.com/en/news/2026/05/06/luigi-mangiones-legal-defense-fund-surpasses-1-5-million-on-his-birthday/"]
       ],
     },
     {
