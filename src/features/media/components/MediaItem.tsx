@@ -71,7 +71,7 @@ export default function MediaItemRenderer({
     if (!tweetId) return null
 
     return wrap(
-      <div className="w-full max-w-xl mx-auto overflow-hidden rounded-lg flex flex-col items-center justify-center" data-theme={isDark ? 'dark' : 'light'}>
+      <div className={`w-full max-w-xl mx-auto overflow-hidden rounded-lg flex flex-col items-center justify-center ${sizeClasses.minHeight}`} data-theme={isDark ? 'dark' : 'light'}>
         <Tweet id={tweetId} />
       </div>
     )

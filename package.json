@@ -32,7 +32,7 @@
     "react-router-dom": "^7.9.4",
     "react-scroll": "^1.9.3",
     "react-swipeable": "^7.0.2",
-    "react-tweet": "^3.3.0",
+    "react-tweet": "^3.3.1",
     "react-youtube": "^10.1.0",
     "remark-breaks": "^4.0.0",
     "remark-gfm": "^4.0.1",
