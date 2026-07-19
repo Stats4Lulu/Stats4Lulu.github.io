@@ -6,11 +6,11 @@
         "name": "Projects",
         "links": [
           [
-            "Stats4Lulu Dashboard",
+            "Dashboard",
             "https://lookerstudio.google.com/reporting/f8ea035e-9a51-498e-b77c-ec1b971eada0/page/p_6tpp4q8xrd?s=smgrVIDQwas"
           ],
           [
-            "Stats4Lulu Dashboard [Translated]",
+            "Dashboard [Translated]",
             "https://lookerstudio.google.com/reporting/d603a7eb-4bb9-4231-973f-05b71e24d3a2/page/p_unct2t61td?s=qXhVAmCmFZM"
           ],
           [
@@ -18,8 +18,12 @@
             "https://www.kaggle.com/stats4lulu/datasets"
           ],
           [
-            "Stats4Lulu Postcard",
+            "Postcard",
             "https://drive.google.com/drive/folders/1MaL0i87axR6M8W8i9NtqZzj7I0pM3CNi"
+          ],
+          [
+            "NYC Murder Statistics",
+            "https://itsmedataqueen.substack.com/p/data-storytelling-the-luigi-mangione"
           ],
           [
             "Record of All Letters Received by Luigi",
@@ -28,6 +32,10 @@
           [
             "Bar Chart of Letters Received by Week",
             "https://public.flourish.studio/visualisation/22838627/"
+          ],
+          [
+            "Music Database",
+            "https://docs.google.com/spreadsheets/u/3/d/1tOaY_C0OEGk-P4eFoohJOkb0KjHmgnBidWtLzl3j5uY/edit?gid=0#gid=0"
           ]
         ]
       },
@@ -65,7 +73,7 @@
         "name": "Collabs",
         "links": [
           [
-            "Luigi Mangione Event Timeline with Luigistics",
+            "Event Timeline",
             "https://stats4lulu.github.io/timeline"
           ],
           [
@@ -75,10 +83,6 @@
           [
             "Donation Guide with The Luigi Case Files",
             "https://www.instagram.com/p/DLxLB_-RMUl/"
-          ],
-          [
-            "Multilingual Printables with Mavericks with Mangione",
-            "https://www.instagram.com/p/DM3u3ijsoM0/"
           ]
         ]
       },
@@ -139,6 +143,10 @@
           [
             "Luigi's Legal Fund Bookshop",
             "https://luigisbooks.com/"
+          ],
+          [
+            "Luigi Mangione Links Database",
+            "https://itsmedataqueen.substack.com/p/the-ultimate-guide-to-luigi-mangione"
           ]
         ]
       }

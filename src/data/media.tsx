@@ -691,11 +691,15 @@ export const GetInvolved = () => (
 export const MediaAndMentions = () => {
   const cards = [
     {
-      title: "Documents",
+      title: "Legal",
       links: [
         [
-          "NY Defense Motion (p.5)",
+          "NY Defense Motion [cited on 18 June 2025]",
           "https://cdn.sanity.io/files/detu0qji/production/667882212ac2c73a724fadcda417e50352de6303.pdf",
+        ],
+        [
+          "NY Defense Court Mention [3 June 2026]",
+          "https://drive.google.com/file/d/1ceb7WGXBscHskImlGi4EVNW0HKquSgAW/view?usp=drive_link",
         ],
       ],
     },
@@ -707,7 +711,9 @@ export const MediaAndMentions = () => {
           "TMZ",
           "https://www.tmz.com/2025/09/04/luigi-mangione-shein-ad-from-chinese-fans/",
         ],
-        ["La Voce di New York", "https://lavocedinewyork.com/en/news/2026/05/06/luigi-mangiones-legal-defense-fund-surpasses-1-5-million-on-his-birthday/"]
+        ["La Voce di New York", "https://lavocedinewyork.com/en/news/2026/05/06/luigi-mangiones-legal-defense-fund-surpasses-1-5-million-on-his-birthday/"],
+        ["Washington Examiner", "https://www.washingtonexaminer.com/news/justice/4608882/luigi-mangione-over-1-million-donations-legal-fund/"],
+        ["NPR", "https://www.npr.org/2026/06/15/nx-s1-5853110/luigi-mangione-court-hearings-growing-support"]
       ],
     },
     {
