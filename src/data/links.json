@@ -40,27 +40,11 @@
         ]
       },
       {
-        "name": "Socials",
+        "name": "Media & Mentions",
         "links": [
           [
-            "Instagram",
-            "https://www.instagram.com/stats4lulu/"
-          ],
-          [
-            "X",
-            "https://x.com/stats4lulu"
-          ],
-          [
-            "Tumblr",
-            "https://www.tumblr.com/stats4lulu"
-          ],
-          [
-            "Reddit",
-            "https://www.reddit.com/user/stats4lulu/"
-          ],
-          [
-            "GitHub",
-            "https://github.com/Stats4Lulu/"
+            "Stats4Lulu Media Summaries",
+            "https://stats4lulu.github.io/media"
           ]
         ]
       }
@@ -87,11 +71,27 @@
         ]
       },
       {
-        "name": "Media & Mentions",
+        "name": "Socials",
         "links": [
           [
-            "Stats4Lulu Media Summaries",
-            "https://stats4lulu.github.io/media"
+            "Instagram",
+            "https://www.instagram.com/stats4lulu/"
+          ],
+          [
+            "X",
+            "https://x.com/stats4lulu"
+          ],
+          [
+            "Tumblr",
+            "https://www.tumblr.com/stats4lulu"
+          ],
+          [
+            "Reddit",
+            "https://www.reddit.com/user/stats4lulu/"
+          ],
+          [
+            "GitHub",
+            "https://github.com/Stats4Lulu/"
           ]
         ]
       }
