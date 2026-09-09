@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Milestone Badge Concepts</title>
+<style>
+  :root {
+    --page-bg: #F8F9FA;
+    --card-bg: #FFFFFF;
+    --text: #23272A;
+    --text-title: #23272A;
+    --text-muted: #949BA4;
+    --border: #E3E5E8;
+    --accent: #5865F2;
+    --accent-text: #FFFFFF;
+    --shadow: 0 8px 22px #00000014;
+    --shadow-hover: 0 12px 34px #00000022;
+    --rail: #E3E5E8;
+    --dot: #5865F2;
+
+    /* WitnessCard uses plain Tailwind gray-*, mirrored here as hex */
+    --gray-50: #F9FAFB;
+    --gray-200: #E5E7EB;
+    --gray-400: #9CA3AF;
+    --gray-500: #6B7280;
+    --gray-600: #4B5563;
+
+    --font-title: "Courier New", Courier, monospace;
+    --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --page-bg: #2B2D31;
+      --card-bg: #1E1F22;
+      --text: #DBDEE1;
+      --text-title: #DBDEE1;
+      --text-muted: #949BA4;
+      --border: #313338;
+      --accent: #5865F2;
+      --accent-text: #FFFFFF;
+      --shadow-hover: 0 12px 34px #00000055;
+      --rail: #313338;
+      --dot: #5865F2;
+
+      --gray-50: #1F2937;
+      --gray-200: #374151;
+      --gray-400: #6B7280;
+      --gray-500: #9CA3AF;
+      --gray-600: #9CA3AF;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --page-bg: #2B2D31;
+    --card-bg: #1E1F22;
+    --text: #DBDEE1;
+    --text-title: #DBDEE1;
+    --text-muted: #949BA4;
+    --border: #313338;
+    --accent: #5865F2;
+    --accent-text: #FFFFFF;
+    --shadow-hover: 0 12px 34px #00000055;
+    --rail: #313338;
+    --dot: #5865F2;
+
+    --gray-50: #1F2937;
+    --gray-200: #374151;
+    --gray-400: #6B7280;
+    --gray-500: #9CA3AF;
+    --gray-600: #9CA3AF;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--page-bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  }
+
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .page { max-width: 720px; margin: 0 auto; padding: 40px 20px 80px; }
+
+  .intro { margin-bottom: 24px; }
+  .intro .eyebrow {
+    font-family: var(--font-title); font-size: 12px; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--text-muted); margin: 0 0 8px;
+  }
+  .intro h1 { font-family: var(--font-title); font-weight: 700; font-size: 24px; margin: 0 0 10px; text-wrap: balance; }
+  .intro p { max-width: 62ch; color: var(--text-muted); font-size: 14px; margin: 0; }
+
+  .tabs { display: flex; gap: 2px; border-bottom: 1px solid var(--border); margin: 28px 0 4px; overflow-x: auto; }
+  .tab {
+    font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--text-muted);
+    background: none; border: none; padding: 10px 12px; cursor: pointer; white-space: nowrap;
+    border-bottom: 2px solid transparent; margin-bottom: -1px;
+  }
+  .tab:hover { color: var(--text); }
+  .tab[aria-selected="true"] { color: var(--text); border-bottom-color: var(--accent); }
+
+  .concept-note { font-size: 13px; color: var(--text-muted); padding: 16px 0 24px; max-width: 62ch; }
+  .concept-note code { font-size: 12px; }
+
+  .panel { display: none; }
+  .panel[data-active="true"] { display: block; }
+
+  .feed { display: flex; flex-direction: column; gap: 16px; }
+
+  .card {
+    position: relative;
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 12px 16px;
+  }
+
+  .card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+  .card-date { font-family: var(--font-title); font-weight: 700; font-size: 18px; color: var(--text-title); white-space: nowrap; display: flex; align-items: center; gap: 6px; }
+  .card-badges { display: flex; flex-wrap: wrap; gap: 4px; justify-content: flex-end; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-family: var(--font-body); font-size: 12px; font-weight: 500;
+    padding: 4px 8px; border-radius: 4px;
+    background: var(--accent); color: var(--accent-text); line-height: 1;
+  }
+  .chip.is-trigger { cursor: pointer; border: none; }
+  .chip.is-outline { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+  .chip svg { width: 10px; height: 10px; }
+
+  .card-title { font-family: var(--font-title); font-weight: 700; font-size: 20px; margin: 0 0 4px; color: var(--text-title); }
+  .card-subtitle { font-family: var(--font-title); font-style: italic; font-size: 16px; color: var(--text-muted); margin: 0 0 8px; }
+  .card-content { font-size: 16px; margin: 0; }
+
+  .card-sources { margin-top: 10px; }
+  .card-sources p { font-size: 13px; font-weight: 600; color: var(--accent); margin: 0 0 4px; }
+  .card-sources .links { display: flex; flex-wrap: wrap; gap: 4px 12px; }
+  .card-sources a { font-size: 13px; text-decoration: none; color: var(--accent); }
+  .card-sources a:hover { text-decoration: underline; }
+
+  /* shared stat row */
+  .stat-row { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+  .stat-row-text { min-width: 0; }
+  .stat-milestone { font-size: 14px; font-weight: 500; margin: 0; color: var(--text); }
+  .stat-detail { font-size: 13px; color: var(--text-muted); margin: 2px 0 0; }
+  .stat-value {
+    flex-shrink: 0; font-family: var(--font-title); font-weight: 700; font-size: 14px;
+    font-variant-numeric: tabular-nums; color: var(--text-title); white-space: nowrap;
+  }
+  .stat-list .stat-row { padding: 8px 0; }
+  .stat-list .stat-row + .stat-row { border-top: 1px solid var(--border); }
+
+  /* ============ 1: popover ============ */
+  .popover-anchor { position: relative; display: inline-block; }
+  .popover {
+    position: absolute; top: calc(100% + 6px); right: 0;
+    width: 280px; max-width: calc(100vw - 40px);
+    background: var(--card-bg); border-radius: 12px; box-shadow: var(--shadow);
+    padding: 10px 14px; z-index: 30;
+    opacity: 0; transform: translateY(-4px); pointer-events: none;
+    transition: opacity 0.14s ease, transform 0.14s ease;
+  }
+  .popover[data-open="true"] { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+  /* ============ 4: inline accordion (mirrors WitnessCard.tsx) ============ */
+  .accordion-wrap { margin-top: 16px; }
+  .accordion-heading { font-size: 14px; font-weight: 600; color: var(--gray-600); margin: 0 0 8px; }
+  .accordion-root { border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  .accordion-item { background: var(--card-bg); }
+  .accordion-item + .accordion-item { border-top: 1px solid var(--border); }
+  .accordion-trigger {
+    width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    background: none; border: none; cursor: pointer; text-align: left;
+    padding: 8px 12px; font-family: var(--font-body); color: var(--text);
+  }
+  .accordion-trigger:hover { background: var(--gray-50); }
+  .accordion-chevron { width: 16px; height: 16px; flex-shrink: 0; color: var(--gray-400); transition: transform 0.2s ease; }
+  .accordion-trigger[aria-expanded="true"] .accordion-chevron { transform: rotate(180deg); }
+  .accordion-panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.2s ease; background: var(--gray-50); }
+  .accordion-panel[data-open="true"] { grid-template-rows: 1fr; }
+  .accordion-panel-inner { overflow: hidden; }
+  .accordion-panel-content { padding: 0 12px 10px; font-size: 13px; color: var(--text); }
+  .accordion-panel-content p { margin: 0; }
+
+  /* ============ 5: hover tooltip / tap-to-pin ============ */
+  .tip-anchor { position: relative; display: inline-flex; }
+  .tip-trigger {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid var(--text-muted);
+    color: var(--text-muted); background: none; cursor: pointer; padding: 0;
+  }
+  .tip-trigger svg { width: 10px; height: 10px; }
+  .tip-anchor:hover .tip-trigger, .tip-trigger[data-pinned="true"] { border-color: var(--accent); color: var(--accent); }
+  .tooltip {
+    position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%) translateY(-4px);
+    width: 240px; background: var(--text); color: var(--card-bg);
+    border-radius: 8px; padding: 8px 10px; font-size: 12px;
+    opacity: 0; pointer-events: none; transition: opacity 0.12s ease, transform 0.12s ease;
+    z-index: 30;
+  }
+  .tooltip::before {
+    content: ""; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%);
+    border: 5px solid transparent; border-bottom-color: var(--text);
+  }
+  .tip-anchor:hover .tooltip, .tooltip[data-pinned="true"] { opacity: 1; transform: translateX(-50%) translateY(0); pointer-events: auto; }
+  .tooltip .stat-milestone, .tooltip .stat-value { color: var(--card-bg); }
+  .tooltip .stat-row + .stat-row { border-top-color: #FFFFFF33; }
+
+  /* ============ 6: always-on stat strip ============ */
+  .strip { margin: 2px 0 10px; }
+  .strip-summary {
+    display: flex; align-items: center; gap: 6px; cursor: pointer; background: none; border: none;
+    padding: 0; font-family: var(--font-body); font-size: 13px; color: var(--text-muted);
+  }
+  .strip-summary strong { color: var(--accent); font-weight: 600; }
+  .strip-chevron { width: 12px; height: 12px; transition: transform 0.2s ease; }
+  .strip-summary[aria-expanded="true"] .strip-chevron { transform: rotate(180deg); }
+  .strip-detail { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.2s ease; }
+  .strip-detail[data-open="true"] { grid-template-rows: 1fr; }
+  .strip-detail-inner { overflow: hidden; }
+  .strip-list { padding-top: 8px; }
+
+  /* ============ 7: read-more-style link ============ */
+  .link-trigger {
+    display: inline-block; margin-top: 8px; background: none; border: none; padding: 0;
+    font-family: var(--font-body); font-size: 14px; color: var(--accent); cursor: pointer;
+  }
+  .link-trigger:hover { text-decoration: underline; }
+  .link-detail { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.2s ease; }
+  .link-detail[data-open="true"] { grid-template-rows: 1fr; }
+  .link-detail-inner { overflow: hidden; }
+  .link-list { padding-top: 10px; }
+  .link-list .stat-row { padding: 6px 0; }
+
+  /* ============ 8: centered dialog ============ */
+  .dialog-overlay {
+    position: fixed; inset: 0; background: #14161A66; display: flex; align-items: center; justify-content: center;
+    padding: 24px; z-index: 40; opacity: 0; pointer-events: none; transition: opacity 0.16s ease;
+  }
+  .dialog-overlay[data-open="true"] { opacity: 1; pointer-events: auto; }
+  .dialog {
+    background: var(--card-bg); border-radius: 12px; width: 380px; max-width: 100%; max-height: 84vh; overflow-y: auto;
+    box-shadow: var(--shadow-hover); transform: translateY(8px); transition: transform 0.16s ease;
+  }
+  .dialog-overlay[data-open="true"] .dialog { transform: translateY(0); }
+  .dialog-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; padding: 16px 18px 12px; border-bottom: 1px solid var(--border); }
+  .dialog-header-date { font-family: var(--font-title); font-size: 12px; color: var(--text-muted); margin: 0 0 2px; }
+  .dialog-header-title { font-family: var(--font-title); font-weight: 700; font-size: 16px; margin: 0; }
+  .dialog-close { width: 26px; height: 26px; border-radius: 6px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: none; border: none; color: var(--text-muted); cursor: pointer; }
+  .dialog-close:hover { background: var(--gray-50); color: var(--text); }
+  .dialog-body { padding: 6px 18px 16px; }
+
+  /* ============ 9: side drawer ============ */
+  .drawer-overlay {
+    position: fixed; inset: 0; background: #14161A66; z-index: 40; opacity: 0; pointer-events: none; transition: opacity 0.2s ease;
+  }
+  .drawer-overlay[data-open="true"] { opacity: 1; pointer-events: auto; }
+  .drawer {
+    position: fixed; top: 0; right: 0; bottom: 0; width: 340px; max-width: 88vw;
+    background: var(--card-bg); box-shadow: var(--shadow-hover);
+    transform: translateX(100%); transition: transform 0.22s cubic-bezier(.32,.72,0,1);
+    display: flex; flex-direction: column;
+  }
+  .drawer-overlay[data-open="true"] .drawer { transform: translateX(0); }
+  .drawer-header { padding: 18px 20px 12px; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+  .drawer-header-date { font-family: var(--font-title); font-size: 12px; color: var(--text-muted); margin: 0 0 2px; }
+  .drawer-header-title { font-family: var(--font-title); font-weight: 700; font-size: 16px; margin: 0; }
+  .drawer-close { width: 26px; height: 26px; border-radius: 6px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: none; border: none; color: var(--text-muted); cursor: pointer; }
+  .drawer-close:hover { background: var(--gray-50); color: var(--text); }
+  .drawer-body { padding: 4px 20px 20px; overflow-y: auto; }
+
+  /* ============ 10: bottom sheet ============ */
+  .sheet-overlay {
+    position: fixed; inset: 0; background: #14161A66; z-index: 40; opacity: 0; pointer-events: none; transition: opacity 0.2s ease;
+  }
+  .sheet-overlay[data-open="true"] { opacity: 1; pointer-events: auto; }
+  .sheet {
+    position: fixed; left: 50%; bottom: 0; transform: translate(-50%, 100%);
+    width: 100%; max-width: 480px;
+    background: var(--card-bg); border-radius: 16px 16px 0 0; box-shadow: var(--shadow-hover);
+    transition: transform 0.22s cubic-bezier(.32,.72,0,1);
+    max-height: 80vh; display: flex; flex-direction: column;
+  }
+  .sheet-overlay[data-open="true"] .sheet { transform: translate(-50%, 0); }
+  .sheet-handle { width: 36px; height: 4px; border-radius: 2px; background: var(--border); margin: 10px auto 4px; }
+  .sheet-header { padding: 6px 20px 12px; border-bottom: 1px solid var(--border); }
+  .sheet-header-date { font-family: var(--font-title); font-size: 12px; color: var(--text-muted); margin: 0 0 2px; }
+  .sheet-header-title { font-family: var(--font-title); font-weight: 700; font-size: 16px; margin: 0; }
+  .sheet-body { padding: 4px 20px 24px; overflow-y: auto; }
+
+  /* ============ 11: timeline rail marker ============ */
+  .rail-feed { display: flex; flex-direction: column; }
+  .rail-row { display: flex; align-items: center; gap: 16px; position: relative; }
+  .rail-row + .rail-row { margin-top: 16px; }
+  .rail-gutter { position: relative; flex-shrink: 0; width: 28px; align-self: stretch; display: flex; align-items: center; justify-content: center; }
+  .rail-line { position: absolute; top: -16px; bottom: -16px; left: 50%; width: 3px; transform: translateX(-50%); background: var(--rail); }
+  .rail-row:first-child .rail-line { top: 50%; }
+  .rail-row:last-child .rail-line { bottom: 50%; }
+  .rail-dot-wrap { position: relative; z-index: 2; }
+  .rail-dot { width: 16px; height: 16px; border-radius: 50%; background: var(--dot); cursor: default; }
+  .rail-dot.has-stats { cursor: pointer; box-shadow: 0 0 0 3px var(--page-bg), 0 0 0 5px var(--accent); }
+  .rail-card { flex: 1; min-width: 0; }
+  .rail-popover {
+    position: absolute; top: 50%; left: calc(100% + 10px); transform: translateY(-50%) translateX(-4px);
+    width: 260px; background: var(--card-bg); border-radius: 12px; box-shadow: var(--shadow-hover);
+    padding: 10px 14px; z-index: 30;
+    opacity: 0; pointer-events: none; transition: opacity 0.14s ease, transform 0.14s ease;
+  }
+  .rail-popover[data-open="true"] { opacity: 1; transform: translateY(-50%) translateX(0); pointer-events: auto; }
+
+  /* ============ 12: per-stat chips ============ */
+  .chip-tip-anchor { position: relative; display: inline-block; }
+  .chip-tooltip {
+    position: absolute; top: calc(100% + 6px); right: 0;
+    width: 220px; background: var(--text); color: var(--card-bg);
+    border-radius: 8px; padding: 8px 10px; font-size: 12px;
+    opacity: 0; transform: translateY(-4px); pointer-events: none; transition: opacity 0.12s ease, transform 0.12s ease;
+    z-index: 30;
+  }
+  .chip-tooltip[data-open="true"] { opacity: 1; transform: translateY(0); pointer-events: auto; }
+  .chip-tooltip p { margin: 0; }
+  .chip-tooltip .stat-detail { color: #DBDEE1; margin-top: 3px; }
+
+  footer.page-footer { max-width: 62ch; margin: 48px auto 0; padding: 0 20px; font-size: 12.5px; color: var(--text-muted); text-align: center; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="intro">
+    <p class="eyebrow">S4L Timeline — Design Review</p>
+    <h1>Milestone badge: ten reveal patterns</h1>
+    <p>
+      All ten reuse the app's own tokens only — no new colors, same Courier title
+      face, same card radius and shadow. What varies is the trigger (badge, link,
+      tooltip, rail marker, per-stat chips) and the reveal (inline, popover, modal,
+      drawer, sheet). #1 and #2 are the two you picked last round, kept as-is for
+      reference.
+    </p>
+  </div>
+
+  <div class="tabs" role="tablist" aria-label="Design concepts">
+    <button class="tab" role="tab" data-tab="1" aria-selected="true">1. Popover</button>
+    <button class="tab" role="tab" data-tab="2" aria-selected="false">2. Accordion</button>
+    <button class="tab" role="tab" data-tab="3" aria-selected="false">3. Tooltip</button>
+    <button class="tab" role="tab" data-tab="4" aria-selected="false">4. Stat strip</button>
+    <button class="tab" role="tab" data-tab="5" aria-selected="false">5. Text link</button>
+    <button class="tab" role="tab" data-tab="6" aria-selected="false">6. Dialog</button>
+    <button class="tab" role="tab" data-tab="7" aria-selected="false">7. Drawer</button>
+    <button class="tab" role="tab" data-tab="8" aria-selected="false">8. Bottom sheet</button>
+    <button class="tab" role="tab" data-tab="9" aria-selected="false">9. Rail marker</button>
+    <button class="tab" role="tab" data-tab="10" aria-selected="false">10. Per-stat chips</button>
+  </div>
+
+  <section class="panel" data-panel="1" data-active="true">
+    <p class="concept-note">Badge in the top-right pill row, same style as category/jurisdiction. Click it, a small card floats off using the card's own shadow.</p>
+    <div class="feed" data-feed="1"></div>
+  </section>
+
+  <section class="panel" data-panel="2">
+    <p class="concept-note">No badge — a "Milestones" section under Sources, identical component and classes to "Witnesses Called" in <code>WitnessCard.tsx</code>. Each milestone is its own row.</p>
+    <div class="feed" data-feed="2"></div>
+  </section>
+
+  <section class="panel" data-panel="3">
+    <p class="concept-note">A small circled-i sits right after the date, not in the badge row. Hover shows a compact tooltip on desktop; on touch, tapping "pins" it open (same target, no separate tap-vs-hover logic to build twice). Lightest-weight trigger of the ten.</p>
+    <div class="feed" data-feed="3"></div>
+  </section>
+
+  <section class="panel" data-panel="4">
+    <p class="concept-note">No trigger to discover at all — a one-line summary sits under the subtitle, always visible ("2 milestones: 85 articles, 60 countries"). Click the line itself to expand the detail. Best if milestones should never be missed at a glance.</p>
+    <div class="feed" data-feed="4"></div>
+  </section>
+
+  <section class="panel" data-panel="5">
+    <p class="concept-note">Reuses the exact "Read more" button already in <code>TimelineCard.tsx</code> — same class, same position below content, just a second line: "Show 2 milestones." Expands into plain rows, no box or border at all.</p>
+    <div class="feed" data-feed="5"></div>
+  </section>
+
+  <section class="panel" data-panel="6">
+    <p class="concept-note">Badge opens a centered, dimmed dialog — plain header (event + date) and a stat list, no hero number this time. Good for treating a milestone as a small "moment" without the ceremony of the earlier gold version.</p>
+    <div class="feed" data-feed="6"></div>
+  </section>
+
+  <section class="panel" data-panel="7">
+    <p class="concept-note">Same badge as #1, but it opens a right-side panel instead of a popover — more room per stat, keeps the event's date/title as a header for context while scrolling a longer list.</p>
+    <div class="feed" data-feed="7"></div>
+  </section>
+
+  <section class="panel" data-panel="8">
+    <p class="concept-note">Same badge, but the panel slides up from the bottom edge instead of the side — the mobile-native pattern (drag handle included), worth it if most traffic here is touch.</p>
+    <div class="feed" data-feed="8"></div>
+  </section>
+
+  <section class="panel" data-panel="9">
+    <p class="concept-note">Uses a piece of the app that none of the others touch: the vertical timeline rail. A dot with attached milestones gets a thin accent ring; clicking it opens a popover anchored to the rail itself, not the card. No card chrome changes at all.</p>
+    <div class="feed rail-feed" data-feed="9"></div>
+  </section>
+
+  <section class="panel" data-panel="10">
+    <p class="concept-note">Instead of one combined badge, each milestone gets its own small outline chip in the badge row ("85 articles", "$100K"). Click any one for just that stat's detail. Best when a reader might care about one specific number, not the full list.</p>
+    <div class="feed" data-feed="10"></div>
+  </section>
+
+  <footer class="page-footer">Mockup only — not wired into the app yet.</footer>
+</div>
+
+<script>
+  const INFO_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="16" x2="12" y2="11"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>';
+  const BARS_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="6" y1="20" x2="6" y2="14"></line><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="6"></line></svg>';
+  const CHEVRON = '<svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>';
+  const CHEVRON_SM = '<svg class="strip-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>';
+  const X_ICON = '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
+
+  const ITEMS = [
+    {
+      id: 3, date: '2024-12-09', category: 'Arrest', jurisdiction: 'PA',
+      title: 'The Arrest', subtitle: 'Luigi Mangione is arrested and formally charged',
+      content: 'Altoona police were dispatched at 9:14 AM to respond to a call at a McDonald’s regarding a suspect match. When police arrive, he initially presents a falsified ID in the name Mark Rosario, but eventually has to identify himself as Luigi Mangione.',
+      sources: ['Redlamps (Substack)', 'Pennsylvania Courts'],
+      stats: [],
+    },
+    {
+      id: 18, date: '2024-12-19', category: 'Court', jurisdiction: 'PA',
+      title: 'Waives Extradition in PA', subtitle: 'Mangione appears in PA court, waives extradition',
+      content: 'Mangione appears in PA court for two back-to-back hearings. The first hearing was preliminary, discussing forgery and gun charges, and the second hearing was the extradition hearing.',
+      sources: ['Crime Timelines'],
+      stats: [
+        { milestone: 'Highest number of media mentions in a single day', detail: 'Top article: UnitedHealthcare CEO murder suspect Luigi Mangione waives extradition, will return to NYC today', value: 85, unit: 'articles' },
+        { milestone: 'Letters received from 60 countries', detail: 'Letters from additional countries including Germany, Brazil and South Korea', value: 60, unit: 'countries' },
+      ],
+    },
+    {
+      id: 14, date: '2024-12-14', category: 'Defense', jurisdiction: 'NY',
+      title: 'KFA Retained', subtitle: 'Karen Friedman Agnifilo retained as lead defense counsel',
+      content: 'Mangione retains Karen Friedman Agnifilo, a former Manhattan chief assistant district attorney, to lead his defense team in the New York case.',
+      sources: ['NY Times'],
+      stats: [
+        { milestone: 'Total donations received reaches $100,000', detail: '', value: 100000, unit: 'USD' },
+      ],
+    },
+  ];
+
+  function formatValue(s) {
+    return s.unit === 'USD' ? '$' + s.value.toLocaleString('en-US') : s.value.toLocaleString('en-US') + ' ' + s.unit;
+  }
+  function shortValue(s) {
+    if (s.unit === 'USD') return s.value >= 1000 ? '$' + Math.round(s.value / 1000) + 'K' : '$' + s.value;
+    return s.value + ' ' + s.unit;
+  }
+  function statRows(stats, withDetail) {
+    return stats.map(s => `
+      <div class="stat-row">
+        <div class="stat-row-text">
+          <p class="stat-milestone">${s.milestone}</p>
+          ${withDetail && s.detail ? `<p class="stat-detail">${s.detail}</p>` : ''}
+        </div>
+        <span class="stat-value">${formatValue(s)}</span>
+      </div>
+    `).join('');
+  }
+
+  function cardShellHTML(item, badgeSlotHTML, opts) {
+    opts = opts || {};
+    return `
+      <article class="card" data-card-id="${item.id}">
+        <div class="card-top">
+          <p class="card-date">${item.date}${opts.dateSlot || ''}</p>
+          <div class="card-badges">
+            <span class="chip">${item.category}</span>
+            <span class="chip">${item.jurisdiction}</span>
+            ${badgeSlotHTML || ''}
+          </div>
+        </div>
+        <h3 class="card-title">${item.title}</h3>
+        <p class="card-subtitle">${item.subtitle}</p>
+        ${opts.stripSlot || ''}
+        <p class="card-content">${item.content}</p>
+        <div class="body-slot"></div>
+        <div class="card-sources">
+          <p>Sources:</p>
+          <div class="links">${item.sources.map(s => `<a href="#" onclick="return false;">${s}</a>`).join('')}</div>
+        </div>
+      </article>
+    `;
+  }
+
+  function closeAll(selector) {
+    document.querySelectorAll(selector).forEach(el => el.setAttribute('data-open', 'false'));
+  }
+
+  // ============ 1: popover ============
+  function buildPopover(feedEl) {
+    ITEMS.forEach(item => {
+      if (!item.stats.length) { feedEl.insertAdjacentHTML('beforeend', cardShellHTML(item, '')); return; }
+      const badge = `<span class="popover-anchor">
+        <button type="button" class="chip is-trigger" data-trigger>${BARS_ICON}${item.stats.length}</button>
+        <div class="popover stat-list" data-open="false">${statRows(item.stats, false)}</div>
+      </span>`;
+      feedEl.insertAdjacentHTML('beforeend', cardShellHTML(item, badge));
+    });
+    feedEl.querySelectorAll('.popover-anchor').forEach(a => {
+      const t = a.querySelector('[data-trigger]'), p = a.querySelector('.popover');
+      t.addEventListener('click', e => { e.stopPropagation(); const open = p.getAttribute('data-open') === 'true'; closeAll('[data-panel="1"] .popover'); p.setAttribute('data-open', open ? 'false' : 'true'); });
+    });
+    document.addEventListener('click', () => closeAll('[data-panel="1"] .popover'));
+  }
+
+  // ============ 2: inline accordion ============
+  function buildAccordion(feedEl) {
+    ITEMS.forEach(item => {
+      feedEl.insertAdjacentHTML('beforeend', cardShellHTML(item, ''));
+      if (!item.stats.length) return;
+      const card = feedEl.lastElementChild;
+      const slot = card.querySelector('.body-slot');
+      const rows = item.stats.map((s, i) => `
+        <div class="accordion-item">
+          <button type="button" class="accordion-trigger" aria-expanded="false" data-idx="${i}">
+            <span class="stat-row" style="flex:1;"><span class="stat-milestone">${s.milestone}</span><span class="stat-value">${formatValue(s)}</span></span>
+            ${CHEVRON}
+          </button>
+          <div class="accordion-panel" data-open="false" data-idx="${i}">
+            <div class="accordion-panel-inner"><div class="accordion-panel-content"><p>${s.detail || 'No further detail.'}</p></div></div>
+          </div>
+        </div>
+      `).join('');
+      slot.innerHTML = `<div class="accordion-wrap"><p class="accordion-heading">Milestones Reached</p><div class="accordion-root">${rows}</div></div>`;
+      slot.querySelectorAll('.accordion-trigger').forEach(t => {
+        t.addEventListener('click', () => {
+          const idx = t.dataset.idx, panel = slot.querySelector(`.accordion-panel[data-idx="${idx}"]`);
+          const open = panel.getAttribute('data-open') === 'true';
+          panel.setAttribute('data-open', open ? 'false' : 'true');
+          t.setAttribute('aria-expanded', String(!open));
+        });
+      });
+    });
+  }
+
+  // ============ 3: tooltip / pin ============
+  function buildTooltip(feedEl) {
+    ITEMS.forEach(item => {
+      if (!item.stats.length) { feedEl.insertAdjacentHTML('beforeend', cardShellHTML(item, '')); return; }
+      const dateSlot = `<span class="tip-anchor">
+        <button type="button" class="tip-trigger" data-trigger aria-label="${item.stats.length} milestones">${INFO_ICON}</button>
+        <div class="tooltip stat-list" data-pinned="false">${statRows(item.stats, false)}</div>
+      </span>`;
+      feedEl.insertAdjacentHTML('beforeend', cardShellHTML(item, '', { dateSlot }));
+    });
+    feedEl.querySelectorAll('.tip-anchor').forEach(a => {
+      const t = a.querySelector('[data-trigger]'), tip = a.querySelector('.tooltip');
+      t.addEventListener('click', e => {
+        e.stopPropagation();
+        const pinned = tip.getAttribute('data-pinned') === 'true';
+        feedEl.querySelectorAll('.tooltip').forEach(el => el.setAttribute('data-pinned', 'false'));
+        feedEl.querySelectorAll('.tip-trigger').forEach(el => el.setAttribute('data-pinned', 'false'));
+        tip.setAttribute('data-pinned', pinned ? 'false' : 'true');
+        t.setAttribute('data-pinned', pinned ? 'false' : 'true');
+      });
+    });
+    document.addEventListener('click', () => {
+      feedEl.querySelectorAll('.tooltip').forEach(el => el.setAttribute('data-pinned', 'false'));
+      feedEl.querySelectorAll('.tip-trigger').forEach(el => el.setAttribute('data-pinned', 'false'));
+    });
+  }
+
+  // ============ 4: always-on stat strip ============
+  function buildStrip(feedEl) {
+    ITEMS.forEach(item => {
+      if (!item.stats.length) { feedEl.insertAdjacentHTML('beforeend', cardShellHTML(item, '')); return; }
+      const summary = item.stats.map(s => `<strong>${formatValue(s)}</strong>`).join(' · ');
+      const stripSlot = `<div class="strip">
+        <button type="button" class="strip-summary" aria-expanded="false" data-trigger>
+          <span>${item.stats.length} milestone${item.stats.length > 1 ? 's' : ''}: ${summary}</span>${CHEVRON_SM}
+        </button>
+        <div class="strip-detail" data-open="false"><div class="strip-detail-inner"><div class="strip-list stat-list">${statRows(item.stats, true)}</div></div></div>
+      </div>`;
+      feedEl.insertAdjacentHTML('beforeend', cardShellHTML(item, '', { stripSlot }));
+    });
+    feedEl.querySelectorAll('[data-trigger]').forEach(t => {
+      t.addEventListener('click', () => {
+        const detail = t.closest('.strip').querySelector('.strip-detail');
+        const open = detail.getAttribute('data-open') === 'true';
+        detail.setAttribute('data-open', open ? 'false' : 'true');
+        t.setAttribute('aria-expanded', String(!open));
+      });
+    });
+  }
+
+  // ============ 5: read-more-style link ============
+  function buildLink(feedEl) {
+    ITEMS.forEach(item => {
+      feedEl.insertAdjacentHTML('beforeend', cardShellHTML(item, ''));
+      if (!item.stats.length) return;
+      const card = feedEl.lastElementChild;
+      const slot = card.querySelector('.body-slot');
+      slot.innerHTML = `
+        <button type="button" class="link-trigger" aria-expanded="false" data-trigger>Show ${item.stats.length} milestone${item.stats.length > 1 ? 's' : ''}</button>
+        <div class="link-detail" data-open="false"><div class="link-detail-inner"><div class="link-list">${statRows(item.stats, true)}</div></div></div>
+      `;
+      const t = slot.querySelector('[data-trigger]'), d = slot.querySelector('.link-detail');
+      t.addEventListener('click', () => {
+        const open = d.getAttribute('data-open') === 'true';
+        d.setAttribute('data-open', open ? 'false' : 'true');
+        t.setAttribute('aria-expanded', String(!open));
+        t.textContent = open ? `Show ${item.stats.length} milestone${item.stats.length > 1 ? 's' : ''}` : 'Hide milestones';
+      });
+    });
+  }
+
+  // ============ 6: centered dialog ============
+  function buildDialog(feedEl) {
+    ITEMS.forEach(item => {
+      feedEl.insertAdjacentHTML('beforeend', cardShellHTML(item, item.stats.length ? `<button type="button" class="chip is-trigger" data-trigger>${BARS_ICON}${item.stats.length}</button>` : ''));
+    });
+    const overlay = document.createElement('div');
+    overlay.className = 'dialog-overlay'; overlay.setAttribute('data-open', 'false');
+    overlay.innerHTML = `<div class="dialog" role="dialog" aria-modal="true">
+      <div class="dialog-header"><div><p class="dialog-header-date" data-date></p><p class="dialog-header-title" data-title></p></div>
+      <button class="dialog-close" data-close aria-label="Close">${X_ICON}</button></div>
+      <div class="dialog-body stat-list" data-list></div></div>`;
+    document.body.appendChild(overlay);
+    function open(item) {
+      overlay.querySelector('[data-date]').textContent = item.date;
+      overlay.querySelector('[data-title]').textContent = item.title;
+      overlay.querySelector('[data-list]').innerHTML = statRows(item.stats, true);
+      overlay.setAttribute('data-open', 'true');
+      overlay.querySelector('[data-close]').focus();
+    }
+    feedEl.querySelectorAll('[data-trigger]').forEach(t => t.addEventListener('click', () => open(ITEMS.find(i => i.id === Number(t.closest('.card').dataset.cardId)))));
+    overlay.addEventListener('click', e => { if (e.target === overlay) overlay.setAttribute('data-open', 'false'); });
+    overlay.querySelector('[data-close]').addEventListener('click', () => overlay.setAttribute('data-open', 'false'));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') overlay.setAttribute('data-open', 'false'); });
+  }
+
+  // ============ 7: side drawer ============
+  function buildDrawer(feedEl) {
+    ITEMS.forEach(item => {
+      feedEl.insertAdjacentHTML('beforeend', cardShellHTML(item, item.stats.length ? `<button type="button" class="chip is-trigger" data-trigger>${BARS_ICON}${item.stats.length}</button>` : ''));
+    });
+    const overlay = document.createElement('div');
+    overlay.className = 'drawer-overlay'; overlay.setAttribute('data-open', 'false');
+    overlay.innerHTML = `<aside class="drawer" role="dialog" aria-modal="true">
+      <div class="drawer-header"><div><p class="drawer-header-date" data-date></p><p class="drawer-header-title" data-title></p></div>
+      <button class="drawer-close" data-close aria-label="Close">${X_ICON}</button></div>
+      <div class="drawer-body stat-list" data-list></div></aside>`;
+    document.body.appendChild(overlay);
+    function open(item) {
+      overlay.querySelector('[data-date]').textContent = item.date;
+      overlay.querySelector('[data-title]').textContent = item.title;
+      overlay.querySelector('[data-list]').innerHTML = statRows(item.stats, true);
+      overlay.setAttribute('data-open', 'true');
+      overlay.querySelector('[data-close]').focus();
+    }
+    feedEl.querySelectorAll('[data-trigger]').forEach(t => t.addEventListener('click', () => open(ITEMS.find(i => i.id === Number(t.closest('.card').dataset.cardId)))));
+    overlay.addEventListener('click', e => { if (e.target === overlay) overlay.setAttribute('data-open', 'false'); });
+    overlay.querySelector('[data-close]').addEventListener('click', () => overlay.setAttribute('data-open', 'false'));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') overlay.setAttribute('data-open', 'false'); });
+  }
+
+  // ============ 8: bottom sheet ============
+  function buildSheet(feedEl) {
+    ITEMS.forEach(item => {
+      feedEl.insertAdjacentHTML('beforeend', cardShellHTML(item, item.stats.length ? `<button type="button" class="chip is-trigger" data-trigger>${BARS_ICON}${item.stats.length}</button>` : ''));
+    });
+    const overlay = document.createElement('div');
+    overlay.className = 'sheet-overlay'; overlay.setAttribute('data-open', 'false');
+    overlay.innerHTML = `<div class="sheet" role="dialog" aria-modal="true">
+      <div class="sheet-handle"></div>
+      <div class="sheet-header"><p class="sheet-header-date" data-date></p><p class="sheet-header-title" data-title></p></div>
+      <div class="sheet-body stat-list" data-list></div></div>`;
+    document.body.appendChild(overlay);
+    function open(item) {
+      overlay.querySelector('[data-date]').textContent = item.date;
+      overlay.querySelector('[data-title]').textContent = item.title;
+      overlay.querySelector('[data-list]').innerHTML = statRows(item.stats, true);
+      overlay.setAttribute('data-open', 'true');
+    }
+    feedEl.querySelectorAll('[data-trigger]').forEach(t => t.addEventListener('click', () => open(ITEMS.find(i => i.id === Number(t.closest('.card').dataset.cardId)))));
+    overlay.addEventListener('click', e => { if (e.target === overlay) overlay.setAttribute('data-open', 'false'); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') overlay.setAttribute('data-open', 'false'); });
+  }
+
+  // ============ 9: timeline rail marker ============
+  function buildRail(feedEl) {
+    ITEMS.forEach(item => {
+      const row = document.createElement('div');
+      row.className = 'rail-row';
+      const hasStats = item.stats.length > 0;
+      row.innerHTML = `
+        <div class="rail-gutter">
+          <div class="rail-line"></div>
+          <div class="rail-dot-wrap">
+            <button type="button" class="rail-dot ${hasStats ? 'has-stats' : ''}" ${hasStats ? 'data-trigger' : ''} aria-label="${hasStats ? item.stats.length + ' milestones' : ''}"></button>
+            ${hasStats ? `<div class="rail-popover stat-list" data-open="false">${statRows(item.stats, false)}</div>` : ''}
+          </div>
+        </div>
+        <div class="rail-card">${cardShellHTML(item, '')}</div>
+      `;
+      feedEl.appendChild(row);
+    });
+    feedEl.querySelectorAll('[data-trigger]').forEach(t => {
+      const pop = t.parentElement.querySelector('.rail-popover');
+      t.addEventListener('click', e => {
+        e.stopPropagation();
+        const open = pop.getAttribute('data-open') === 'true';
+        feedEl.querySelectorAll('.rail-popover').forEach(p => p.setAttribute('data-open', 'false'));
+        pop.setAttribute('data-open', open ? 'false' : 'true');
+      });
+    });
+    document.addEventListener('click', () => feedEl.querySelectorAll('.rail-popover').forEach(p => p.setAttribute('data-open', 'false')));
+  }
+
+  // ============ 10: per-stat chips ============
+  function buildChips(feedEl) {
+    ITEMS.forEach(item => {
+      const badges = item.stats.map((s, i) => `
+        <span class="chip-tip-anchor">
+          <button type="button" class="chip is-trigger is-outline" data-trigger data-idx="${i}">${shortValue(s)}</button>
+          <div class="chip-tooltip" data-open="false" data-idx="${i}">
+            <p class="stat-milestone">${s.milestone}</p>
+            ${s.detail ? `<p class="stat-detail">${s.detail}</p>` : ''}
+          </div>
+        </span>
+      `).join('');
+      feedEl.insertAdjacentHTML('beforeend', cardShellHTML(item, badges));
+    });
+    feedEl.querySelectorAll('.chip-tip-anchor').forEach(a => {
+      const t = a.querySelector('[data-trigger]'), tip = a.querySelector('.chip-tooltip');
+      t.addEventListener('click', e => {
+        e.stopPropagation();
+        const open = tip.getAttribute('data-open') === 'true';
+        feedEl.querySelectorAll('.chip-tooltip').forEach(el => el.setAttribute('data-open', 'false'));
+        tip.setAttribute('data-open', open ? 'false' : 'true');
+      });
+    });
+    document.addEventListener('click', () => feedEl.querySelectorAll('.chip-tooltip').forEach(el => el.setAttribute('data-open', 'false')));
+  }
+
+  buildPopover(document.querySelector('[data-feed="1"]'));
+  buildAccordion(document.querySelector('[data-feed="2"]'));
+  buildTooltip(document.querySelector('[data-feed="3"]'));
+  buildStrip(document.querySelector('[data-feed="4"]'));
+  buildLink(document.querySelector('[data-feed="5"]'));
+  buildDialog(document.querySelector('[data-feed="6"]'));
+  buildDrawer(document.querySelector('[data-feed="7"]'));
+  buildSheet(document.querySelector('[data-feed="8"]'));
+  buildRail(document.querySelector('[data-feed="9"]'));
+  buildChips(document.querySelector('[data-feed="10"]'));
+
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.tab').forEach(t => t.setAttribute('aria-selected', 'false'));
+      tab.setAttribute('aria-selected', 'true');
+      const n = tab.dataset.tab;
+      document.querySelectorAll('.panel').forEach(p => p.setAttribute('data-active', String(p.dataset.panel === n)));
+    });
+  });
+</script>
+</body>
+</html>
